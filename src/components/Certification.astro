@@ -13,28 +13,28 @@ const { certification } = Astro.props;
   <div class="max-h-[650px] overflow-y-auto pr-4 custom-scroll-area">
     {
       certification.map(({ title, issuer, date, summary, image, linkSource }, index) => {
-        const top = index * 32; // Jarak tumpukan yang sedikit lebih lebar agar terlihat elegan
+        const top = index * 32; 
         return (
           <div 
             style={`top: ${top}px;`} 
-            class="sticky mb-10 rounded-2xl border border-white/10 bg-[#1c232d] shadow-2xl overflow-hidden transition-all duration-300 hover:border-primary/30"
+            class="sticky mb-10 rounded-2xl border border-white/5 bg-neutral-900/40 backdrop-blur-md shadow-2xl overflow-hidden transition-all duration-300 hover:border-primary/40 group/card"
           >
             <div class="flex flex-col md:flex-row min-h-[320px]">
               
               <div class="flex-[1.5] p-8 md:p-10 flex flex-col justify-center">
-                <h3 class="text-primary text-2xl md:text-3xl font-serif font-medium mb-3 leading-tight">
+                <h3 class="text-primary text-2xl md:text-3xl font-serif font-medium mb-3 leading-tight group-hover/card:brightness-125 transition-all">
                   {title}
                 </h3>
                 
                 <div class="flex items-center gap-3 mb-5">
-                  <span class="text-white/50 text-xs font-semibold uppercase tracking-widest bg-white/5 px-2 py-1 rounded">
+                  <span class="text-white/60 text-[10px] font-semibold uppercase tracking-widest bg-primary/10 border border-primary/20 px-2 py-1 rounded">
                     {issuer}
                   </span>
                   <span class="text-white/20">•</span>
                   <span class="text-white/40 text-sm font-medium">{date}</span>
                 </div>
 
-                <p class="text-neutral/80 text-base leading-relaxed max-w-lg italic">
+                <p class="text-neutral/70 text-base leading-relaxed max-w-lg italic">
                   "{summary}"
                 </p>
                 
@@ -52,13 +52,13 @@ const { certification } = Astro.props;
                 )}
               </div>
 
-              <div class="flex-1 relative min-h-[250px] md:min-h-full overflow-hidden bg-black/40">
+              <div class="flex-1 relative min-h-[250px] md:min-h-full overflow-hidden bg-black/60">
                 <img 
                   src={image} 
                   alt={title} 
-                  class="absolute inset-0 w-full h-full object-cover object-top border-l border-white/5 transition-transform duration-500 hover:scale-105" 
+                  class="absolute inset-0 w-full h-full object-cover object-top border-l border-white/5 transition-transform duration-700 group-hover/card:scale-105" 
                 />
-                <div class="absolute inset-0 bg-gradient-to-r from-[#1c232d] to-transparent md:block hidden w-20"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/20 to-transparent md:block hidden w-32"></div>
               </div>
 
             </div>
@@ -70,13 +70,14 @@ const { certification } = Astro.props;
 </Section>
 
 <style>
-  .custom-scroll-area::-webkit-scrollbar { width: 5px; }
+  .custom-scroll-area::-webkit-scrollbar { width: 4px; }
   .custom-scroll-area::-webkit-scrollbar-track { background: transparent; }
   .custom-scroll-area::-webkit-scrollbar-thumb { 
-    background: rgba(87, 85, 255, 0.2); 
+    /* Scrollbar menggunakan warna Primary (Maroon) yang sangat tipis */
+    background: rgba(128, 0, 0, 0.3); 
     border-radius: 10px; 
   }
   .custom-scroll-area::-webkit-scrollbar-thumb:hover { 
-    background: rgba(87, 85, 255, 0.5); 
+    background: rgba(128, 0, 0, 0.6); 
   }
 </style>

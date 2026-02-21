@@ -11,24 +11,24 @@ const { name, specialty, summary, email } = Astro.props;
 
 <section class="flex flex-col-reverse items-center justify-between gap-10 py-16 lg:flex-row">
   <div class="flex-1 text-center lg:text-left">
-    <p class="mb-2 text-primary font-medium tracking-wide">Welcome to my portfolio</p>
-    <h1 class="mb-4 text-5xl font-bold leading-tight text-white lg:text-6xl">
+    <p class="mb-2 text-primary font-medium tracking-widest uppercase text-sm">Welcome to my portfolio</p>
+    <h1 class="mb-4 text-5xl font-bold leading-tight text-white lg:text-6xl tracking-tighter">
       {name}
     </h1>
-    <h2 class="mb-4 text-2xl font-semibold text-slate-400">
+    <h2 class="mb-4 text-2xl font-semibold text-neutral-400">
       {specialty}
     </h2>
     
-    <p class="mb-8 max-w-xl text-lg leading-relaxed text-slate-400 text-justify lg:text-justify">
+    <p class="mb-8 max-w-xl text-lg leading-relaxed text-neutral-400 text-justify">
       {summary}
     </p>
 
     <div class="flex flex-col items-center gap-6 lg:items-start">
-      <a href={email} target="_blank" class="rounded-lg bg-primary px-8 py-3 font-bold text-white transition-transform hover:scale-105">
-       Curriculum Vitae
+      <a href={email} target="_blank" class="rounded-full bg-primary px-10 py-3.5 font-bold text-white transition-all hover:bg-primary/80 hover:shadow-[0_0_20px_rgba(168,28,28,0.3)] hover:-translate-y-1">
+        Curriculum Vitae
       </a>
       
-      <div class="flex items-center gap-5 text-2xl text-slate-400">
+      <div class="flex items-center gap-6 text-2xl text-neutral-500">
         <a href="https://linkedin.com/in/alneira" target="_blank" class="hover:text-primary transition-colors">
           <i class="fa-brands fa-linkedin"></i>
         </a>
@@ -43,19 +43,21 @@ const { name, specialty, summary, email } = Astro.props;
   </div>
 
   <div class="w-full lg:w-auto">
-    <div class="mx-auto w-full max-w-[400px] rounded-3xl border border-white/10 bg-slate-800/30 p-8 backdrop-blur-sm lg:mr-0">
-      <div class="mx-auto h-64 w-64 overflow-hidden rounded-full border-4 border-primary shadow-2xl lg:h-72 lg:w-72">
-        <img src="/aal.png" alt={name} class="h-full w-full object-cover" />
+    <div class="mx-auto w-full max-w-[400px] rounded-[2rem] border border-white/5 bg-white/[0.02] p-8 backdrop-blur-xl lg:mr-0 shadow-2xl">
+      <div class="mx-auto h-64 w-64 overflow-hidden rounded-full border-2 border-primary/50 p-2 lg:h-72 lg:w-72">
+        <div class="h-full w-full rounded-full overflow-hidden border-4 border-primary shadow-[0_0_30px_rgba(168,28,28,0.2)]">
+           <img src="/aal.png" alt={name} class="h-full w-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500" />
+        </div>
       </div>
 
       <div class="mt-8 grid grid-cols-2 gap-4">
-        <div class="rounded-xl border border-white/10 bg-slate-900/50 p-4 text-center">
+        <div class="rounded-2xl border border-white/5 bg-white/[0.03] p-4 text-center group hover:border-primary/30 transition-colors">
           <p class="text-2xl font-bold text-primary">4+</p>
-          <p class="text-xs text-slate-400">Work Exp</p>
+          <p class="text-[10px] uppercase tracking-widest text-neutral-500 mt-1">Work Exp</p>
         </div>
-        <div class="rounded-xl border border-white/10 bg-slate-900/50 p-4 text-center">
+        <div class="rounded-2xl border border-white/5 bg-white/[0.03] p-4 text-center group hover:border-primary/30 transition-colors">
           <p class="text-2xl font-bold text-primary">5+</p>
-          <p class="text-xs text-slate-400">Projects</p>
+          <p class="text-[10px] uppercase tracking-widest text-neutral-500 mt-1">Skills</p>
         </div>
       </div>
     </div>

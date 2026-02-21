@@ -7,7 +7,7 @@ export const SITE_CONFIG: SiteConfig = {
   lang: "en",
   siteLogo: "/aal.png",
   navLinks: [
-    { text: "Home", href: "/home" },
+    { text: "Home", href: "/" },
         { text: "Skills", href: "#skills" },
     { text: "Experience", href: "#experience" },
         { text: "Organization", href: "#organization" },
