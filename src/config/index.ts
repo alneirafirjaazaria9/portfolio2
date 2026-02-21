@@ -34,7 +34,7 @@ export const SITE_CONTENT: SiteContent = {
       position: "Audit Intern",
       startDate: "Jan, 2026",
       endDate: "now",
-      image: ["/moore.png"],
+      image: "/moore.png",
       summary: [
         "Executing footing procedures on Financial Statement's draft to ensure mathematical accuracy.",
         "Analyze and prepare Working Audit Paper for current audit engagements.",

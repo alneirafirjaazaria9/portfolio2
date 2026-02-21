@@ -28,8 +28,8 @@ export interface ExperienceProps {
   position: string;
   startDate: string;
   endDate: string;
-  summary: string | string[];
-image?: string | string[]; // Bisa satu gambar atau kumpulan gambar
+  summary: string[]; // Ini harus array karena kamu pakai .map()
+  image: string | string[]; // Tanda | string[] ini hukumnya WAJIB agar bisa terima 2 foto
 }
 
 export interface ProjectProps {
