@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import Header from "@components/Header.astro";
 import "@fontsource/be-vietnam-pro";
 import "@fontsource-variable/gabarito";
@@ -44,7 +45,7 @@ const ogImgUrl = canonicalURL + socialImage;
   </head>
   <body class="bg-black font-sans">
     <Header siteLogo={siteLogo} navLinks={navLinks} />
-    <main class="mx-auto max-w-3xl px-5">
+    <main class="mx-auto max-w-5xl px-5">
       <slot />
     </main>
     <Footer author={author} socialLinks={socialLinks} />

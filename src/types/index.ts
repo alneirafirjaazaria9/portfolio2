@@ -12,6 +12,7 @@ export interface SiteContent {
   hero: HeroProps;
   experience: ExperienceProps[];
   projects: ProjectProps[];
+  certification: CertificationProps[]; // <--- TAMBAHKAN BARIS INI!
   about: AboutProps;
 }
 
@@ -28,16 +29,25 @@ export interface ExperienceProps {
   startDate: string;
   endDate: string;
   summary: string | string[];
+image?: string | string[]; // Bisa satu gambar atau kumpulan gambar
 }
 
 export interface ProjectProps {
   name: string;
   summary: string;
-  image: string;
+image: string | string[];
+  date?: string;
   linkPreview?: string;
   linkSource?: string;
 }
-
+export interface CertificationProps {
+  title: string;
+  issuer: string;
+  date: string;
+  summary: string;
+  image: string;
+  linkSource?: string;
+}
 export interface AboutProps {
   description: string;
   image: string;

@@ -1,0 +1,82 @@
+---
+import Section from "./Section.astro";
+import type { CertificationProps } from "@types";
+
+interface Props {
+  certification: CertificationProps[];
+}
+
+const { certification } = Astro.props;
+---
+
+<Section text="Certification" href="certification">
+  <div class="max-h-[650px] overflow-y-auto pr-4 custom-scroll-area">
+    {
+      certification.map(({ title, issuer, date, summary, image, linkSource }, index) => {
+        const top = index * 32; // Jarak tumpukan yang sedikit lebih lebar agar terlihat elegan
+        return (
+          <div 
+            style={`top: ${top}px;`} 
+            class="sticky mb-10 rounded-2xl border border-white/10 bg-[#1c232d] shadow-2xl overflow-hidden transition-all duration-300 hover:border-primary/30"
+          >
+            <div class="flex flex-col md:flex-row min-h-[320px]">
+              
+              <div class="flex-[1.5] p-8 md:p-10 flex flex-col justify-center">
+                <h3 class="text-primary text-2xl md:text-3xl font-serif font-medium mb-3 leading-tight">
+                  {title}
+                </h3>
+                
+                <div class="flex items-center gap-3 mb-5">
+                  <span class="text-white/50 text-xs font-semibold uppercase tracking-widest bg-white/5 px-2 py-1 rounded">
+                    {issuer}
+                  </span>
+                  <span class="text-white/20">•</span>
+                  <span class="text-white/40 text-sm font-medium">{date}</span>
+                </div>
+
+                <p class="text-neutral/80 text-base leading-relaxed max-w-lg italic">
+                  "{summary}"
+                </p>
+                
+                {linkSource && (
+                  <div class="mt-8">
+                    <a 
+                      href={linkSource} 
+                      target="_blank" 
+                      class="inline-flex items-center gap-2 text-sm font-medium text-white bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/50 px-5 py-2.5 rounded-full transition-all duration-300 group"
+                    >
+                      View Credential 
+                      <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <div class="flex-1 relative min-h-[250px] md:min-h-full overflow-hidden bg-black/40">
+                <img 
+                  src={image} 
+                  alt={title} 
+                  class="absolute inset-0 w-full h-full object-cover object-top border-l border-white/5 transition-transform duration-500 hover:scale-105" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-r from-[#1c232d] to-transparent md:block hidden w-20"></div>
+              </div>
+
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</Section>
+
+<style>
+  .custom-scroll-area::-webkit-scrollbar { width: 5px; }
+  .custom-scroll-area::-webkit-scrollbar-track { background: transparent; }
+  .custom-scroll-area::-webkit-scrollbar-thumb { 
+    background: rgba(87, 85, 255, 0.2); 
+    border-radius: 10px; 
+  }
+  .custom-scroll-area::-webkit-scrollbar-thumb:hover { 
+    background: rgba(87, 85, 255, 0.5); 
+  }
+</style>
