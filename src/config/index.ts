@@ -179,4 +179,4 @@ export const SITE_CONTENT: SiteContent = {
       linkSource: "https://drive.google.com/file/u/1/d/1tMTLu41ROb7G-JVJ4LN357JDp0vVKlJq/view?usp=drivesdk",
     },
   ], // Ini adalah penutup array certification
-}; // Ini adalah penutup SITE_CONTENT. PASTIKAN TIDAK ADA KODE 'about' DI BAWAH INI.
+}; 
