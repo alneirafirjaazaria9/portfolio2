@@ -99,6 +99,18 @@ export const SITE_CONTENT: SiteContent = {
       ],
     },
     {
+      company: "Komite Audit Mahasiswa",
+      position: "Organization Internal Auditor",
+      startDate: "Aug, 2024",
+      endDate: "Oct, 2025",
+      image: ["/kam3.png", "/kam1.png"],
+      summary: [
+        "Played role as the Person in Charge of Audit activities for 2 Student Organizations.",
+        "Analyzing and examining evidence of 10+ student activity transactions and other financial documents.",
+        "Evaluating the financial management conducted by KM IPB student organizations.",
+      ],
+    },
+    {
       company: "Bank Rakyat Indonesia (Persero) Tbk.",
       position: "Unit Administrative Intern",
       startDate: "Jul, 2023",
