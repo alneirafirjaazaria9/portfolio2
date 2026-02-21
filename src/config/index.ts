@@ -5,7 +5,7 @@ export const SITE_CONFIG: SiteConfig = {
   author: "Alneira Firja Azaria",
   description: "A final-year Accounting student at IPB University with strong analytical skills and extensive internship experience in accounting/finance and auditing.",
   lang: "en",
-  siteLogo: "/alneira.jpg",
+  siteLogo: "/alneiraaf.jpg",
   navLinks: [
         { text: "Home", href: "/home" },
     { text: "Experience", href: "#experience" },
@@ -166,7 +166,7 @@ image: ["/daxtro1.jpeg", "/daxtro2.png"],
     },
   ],
   about: {
-    description: "As a final-year student of the Bachelor Applied of Accounting at Institut Pertanian Bogor with significant track record of academic improvement (Final GPA: 3.65).",
-    image: "/alneira.jpg",
+    description: "As a final-year student of the Bachelor Applied of Accounting at Institut Pertanian Bogor with significant track record of academic improvement with passionate in accounting and auditing. I have skills in conducting sharp financial data analysis, managing projects, and leading teams.",
+    image: "/alneiraaf.jpg",
   },
 };
