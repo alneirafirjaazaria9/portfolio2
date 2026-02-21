@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
+import Skills from "@components/Skills.astro";
 import Experience from "@components/Experience.astro";
 import Organization from "@components/Organization.astro"; // PINDAHKAN KE SINI
 import Projects from "@components/Projects.astro";
@@ -10,8 +11,9 @@ import { SITE_CONTENT, SITE_CONFIG } from "../config/index";
 ---
 
 <Layout title={SITE_CONFIG.title} description={SITE_CONFIG.description}>
-  <main class="space-y-20">
+  <main class="space-y-10">
     <Hero {...SITE_CONTENT.hero} />
+    <Skills skills={SITE_CONTENT.skills} />
     <Experience experience={SITE_CONTENT.experience} />
     
     {/* Sekarang baris ini tidak akan merah lagi */}

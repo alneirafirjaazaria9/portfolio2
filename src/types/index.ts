@@ -21,8 +21,22 @@ export interface HeroProps {
   specialty: string;
   summary: string;
   email: string;
+}export interface SiteContent {
+  hero: HeroProps;
+skills: {
+    technical: SkillProps[];
+    soft: SkillProps[];
+  };  experience: ExperienceProps[];
+  organization: OrganizationProps[];
+  projects: ProjectProps[];
+  certification: CertificationProps[];
 }
 
+// TAMBAHKAN JUGA INTERFACE INI DI BAWAHNYA
+export interface SkillProps {
+  name: string;
+  level: string;
+}
 export interface ExperienceProps {
   company: string;
   position: string;

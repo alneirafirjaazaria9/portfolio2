@@ -8,7 +8,8 @@ export const SITE_CONFIG: SiteConfig = {
   siteLogo: "/aal.png",
   navLinks: [
     { text: "Home", href: "/home" },
-    { text: "Experience", href: "#organization" },
+        { text: "Skills", href: "#skills" },
+    { text: "Experience", href: "#experience" },
         { text: "Organization", href: "#organization" },
     { text: "Projects", href: "#projects" },
     { text: "Certification", href: "#certification" },
@@ -28,6 +29,30 @@ export const SITE_CONTENT: SiteContent = {
     summary: "Detail-oriented final-year student of the Bachelor Applied of Accounting at Institut Pertanian Bogor with significant track record of academic improvement. I have interested and experienced in accounting and auditing. I have skills in conducting sharp financial data analysis, managing projects, and leading teams.",
     email: "/CV_AlneiraFirjaAzaria.pdf",
   },
+ // ... di dalam SITE_CONTENT
+ // Di dalam SITE_CONTENT
+  skills: {
+    technical: [
+      { name: "Advanced Excel", level: "Advanced" },
+      { name: "Accurate System", level: "Intermediate" },
+      { name: "Kledo Accounting", level: "Certified" },
+      { name: "Financial Reporting", level: "Intermediate" },
+            { name: "External Audit", level: "Experienced" },
+                        { name: "Internal Audit", level: "Certified" },
+      { name: "Data Analyze", level: "Basic" },
+
+
+    ],
+    soft: [
+    { name: "Leadership", level: "Expert" },
+     { name: "Time Management", level: "Advanced" },
+      { name: "Analytical Thinking", level: "Expert" },
+      { name: "Communication", level: "Advanced" },
+      { name: "Teamwork", level: "Advanced" },
+      { name: "Problem Solving", level: "Expert" },
+    ]
+  },
+  
   experience: [
     {
       company: "KAP Mirawati Sensi Idris (Moore Global)",
@@ -104,7 +129,7 @@ export const SITE_CONTENT: SiteContent = {
       role: "Staff of Internal Department ",
       organization: "HIMAVO AKMAPESA IPB",
       date: "2023 - 2024",
-      description: "MActively contributed to several work programs as the Design & Documentation Division Coordinator and Chief Executive",
+      description: "Actively contributed to several work programs as the Design & Documentation Division Coordinator and Chief Executive",
     },
   ],
   projects: [
