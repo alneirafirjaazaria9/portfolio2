@@ -11,9 +11,9 @@ export interface SiteConfig extends HeaderProps {
 export interface SiteContent {
   hero: HeroProps;
   experience: ExperienceProps[];
+    organization: OrganizationProps[];
   projects: ProjectProps[];
   certification: CertificationProps[]; // <--- TAMBAHKAN BARIS INI!
-  about: AboutProps;
 }
 
 export interface HeroProps {
@@ -40,6 +40,13 @@ image: string | string[];
   linkPreview?: string;
   linkSource?: string;
 }
+export interface OrganizationProps {
+  role: string;
+  organization: string;
+  date: string;
+  description: string;
+    linkSource?: string;
+}
 export interface CertificationProps {
   title: string;
   issuer: string;
@@ -48,10 +55,7 @@ export interface CertificationProps {
   image: string;
   linkSource?: string;
 }
-export interface AboutProps {
-  description: string;
-  image: string;
-}
+
 
 export interface HeaderProps {
   siteLogo: string;

@@ -2,9 +2,9 @@
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
 import Experience from "@components/Experience.astro";
+import Organization from "@components/Organization.astro"; // PINDAHKAN KE SINI
 import Projects from "@components/Projects.astro";
 import Certification from "@components/Certification.astro";
-import About from "@components/About.astro";
 import Footer from "@components/Footer.astro";
 import { SITE_CONTENT, SITE_CONFIG } from "../config/index";
 ---
@@ -13,9 +13,13 @@ import { SITE_CONTENT, SITE_CONFIG } from "../config/index";
   <main class="space-y-20">
     <Hero {...SITE_CONTENT.hero} />
     <Experience experience={SITE_CONTENT.experience} />
+    
+    {/* Sekarang baris ini tidak akan merah lagi */}
+    <Organization organization={SITE_CONTENT.organization} />
+    
     <Projects projects={SITE_CONTENT.projects} />
     <Certification certification={SITE_CONTENT.certification} />
-    <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
   </main>
-  <Footer author={SITE_CONFIG.author} socialLinks={SITE_CONFIG.socialLinks} />
+  
+  <Footer author={SITE_CONFIG.author} socialLinks={SITE_CONFIG.socialLinks || []} />
 </Layout>
