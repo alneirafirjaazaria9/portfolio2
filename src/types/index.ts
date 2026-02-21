@@ -28,8 +28,8 @@ export interface ExperienceProps {
   position: string;
   startDate: string;
   endDate: string;
-  summary: string[]; // Ini harus array karena kamu pakai .map()
-  image: string | string[]; // Tanda | string[] ini hukumnya WAJIB agar bisa terima 2 foto
+  summary: string[]; 
+  image: string | string[]; // <--- TAMBAHKAN INI agar Vercel tidak error
 }
 
 export interface ProjectProps {
