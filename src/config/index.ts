@@ -5,7 +5,7 @@ export const SITE_CONFIG: SiteConfig = {
   author: "Alneira Firja Azaria",
   description: "A final-year Accounting student at IPB University with strong analytical skills and extensive internship experience in accounting/finance and auditing.",
   lang: "en",
-  siteLogo: "/alneira.jpg",
+  siteLogo: "/aal.png",
   navLinks: [
     { text: "Home", href: "/home" },
     { text: "Experience", href: "#organization" },
