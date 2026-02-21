@@ -12,7 +12,6 @@ export const SITE_CONFIG: SiteConfig = {
         { text: "Organization", href: "#organization" },
     { text: "Projects", href: "#projects" },
     { text: "Certification", href: "#certification" },
-    { text: "About", href: "#about" },
   ],
   socialLinks: [
     { text: "LinkedIn", href: "https://linkedin.com/in/alneira" },
@@ -52,9 +51,10 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "Dec, 2025",
       image: ["/daxtro1.jpeg", "/daxtro2.png"],
       summary: [
-        "Designing a controlling budgeting form based on Microsoft Excel for 6 divisions.",
+        "Designed a controlling budget tools based on Advanced Microsoft Excel for 6 office divisions.",
         "Internal audits, include stock opname of 30+ spareparts.",
         "Create a Standard Operational Procedure (SOP) of submission budgeting.",
+        "Entry 100+ general journal for daily operational transactions in Accurate System (both budgeting, purchasing, payroll, etc.)",
         "Analyzing and recapping 20+ transaction of disbursement activities and budget realization of the company divisions.",
       ],
     },
