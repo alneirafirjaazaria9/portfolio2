@@ -147,13 +147,13 @@ export const SITE_CONTENT: SiteContent = {
   projects: [
     {
       name: "Excel-Based Budget Controlling Tool (R&D Project)",
-      summary: "I designed and implemented an integrated Budget Control System using Advanced Excel for 6 divisions.",
+      summary: "During my internship period as a Finance & Accounting at DAXTRO Ice Machie, I succesfully designed and implemented an integrated Budget Control System using Advanced Excel for 6 divisions. The key features include automated tracking, variance analysis, and help management to built an internal control from reminders to mitigate late reporting and ensure data integrity.",
       date: "Aug 2025 - Dec 2025",
       image: "/controlb.png",
     },
     {
       name: "MonifyIPB - Budgeting Website",
-      summary: "Developed the visual identity and user interface for MonifyIPB, an accounting-based budget management platform.",
+      summary: "MonifyIPB is designed to make it easier for users to monitor and manage monthly budgets to be more efficient and dynamic. Developed the visual identity and user interface for MonifyIPB, an accounting-based budget management platform.",
       date: "Oct 2024 - Dec 2024",
       image: "/monify.png",
     },
