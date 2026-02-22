@@ -90,8 +90,8 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "Jun, 2025",
       image: ["/mnk1.png", "/mnk2.png"],
       summary: [
-        "Participated in handling audits for over 10+ corporate clients.",
-        "Analyzing and Preparing Audit Working Papers.",
+        "Participated in handled audits for over 10+ corporate clients.",
+        "Analyzed and Prepared Audit Working Papers.",
         "Verification of 300+ supporting cash documents (vouching).",
         "Performed General Ledger (GL) reconciliation and verifying balances.",
         "On-site audits at 7 client companies, includes inventory, assets, and cash opname.",
@@ -118,9 +118,9 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "Aug, 2023",
       image: ["/bri.png"],
       summary: [
-        "Checking the validity of recording unit transactions.",
-        "Manage document archives from units.",
-        "Assisting in unit bookkeeping process.",
+        "Verifying the validity of recording unit transactions.",
+        "Manage document archives from office units.",
+        "Assisted in unit bookkeeping process.",
       ],
     },
   ],
