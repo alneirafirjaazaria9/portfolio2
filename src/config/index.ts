@@ -85,7 +85,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       company: "KAP MNK & Partners (Surakarta Branch)",
-      position: "Audit Assistant",
+      position: "Audit Intern",
       startDate: "Jan, 2025",
       endDate: "Jun, 2025",
       image: ["/mnk1.png", "/mnk2.png"],
