@@ -105,9 +105,10 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "Oct, 2025",
       image: ["/kam3.png", "/kam1.png"],
       summary: [
+               "Create teams audit work programs before the audit process begins.",
         "Played role as the Person in Charge of Audit activities for 2 Student Organizations.",
-        "Analyzing and examining evidence of 10+ student activity transactions and other financial documents.",
-        "Evaluating the financial management conducted by KM IPB student organizations.",
+        "Analyze and examine evidence of 10+ student activity transactions and other financial documents.",
+        "Provided recommendations for improvements to enhance organizational efficiency and effectiveness.",
       ],
     },
     {
