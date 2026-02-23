@@ -219,7 +219,7 @@ export const SITE_CONTENT: SiteContent = {
       issuer: "Bank Rakyat Indonesia (Persero) Tbk.",
       date: "2023",
       summary: "Gained hands-on experience in banking administration and transaction verification.",
-      image: "/bri.png",
+      image: "/bri2.jpeg",
       linkSource: "https://drive.google.com/file/u/1/d/1tMTLu41ROb7G-JVJ4LN357JDp0vVKlJq/view?usp=drivesdk",
     },
   ], // Ini adalah penutup array certification
