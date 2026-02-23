@@ -61,12 +61,12 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "now",
       image: ["/moore.png"],
       summary: [
-        "Executing footing procedures on Financial Statement's draft to ensure mathematical accuracy.",
-        "Analyze and prepare Working Audit Paper for current audit engagements.",
+        "Executed footing procedures on Financial Statement's draft to ensure mathematical accuracy.",
+        "Analyzed and prepared Working Audit Paper for current audit engagements.",
         "Performed General Ledger (GL) reconciliation and verifying balances.",
-        "Performed substantive testing by vouching expenses transactions to source documents.",
+        "Performed substantive testing by vouching several accounts to source documents.",
         "Conducted Accounts Receivable (AR) aging analysis.",
-        "Recalculate asset depreciation and amortization.",
+        "Recalculate asset depreciation/amortization.",
       ],
     },
     {
@@ -80,7 +80,7 @@ export const SITE_CONTENT: SiteContent = {
         "Internal audits, include stock opname of 30+ spareparts.",
         "Create a Standard Operational Procedure (SOP) of submission budgeting.",
         "Entry 100+ general journal for daily operational transactions in Accurate System (both budgeting, purchasing, payroll, etc.)",
-        "Analyzing and recapping 20+ transaction of disbursement activities and budget realization of the company divisions.",
+        "Analyzed and recap 20+ transaction of disbursement activities and budget realization of the company divisions.",
       ],
     },
     {
@@ -91,11 +91,11 @@ export const SITE_CONTENT: SiteContent = {
       image: ["/mnk1.png", "/mnk2.png"],
       summary: [
         "Participated in handled audits for over 10+ corporate clients.",
-        "Analyzed and Prepared Audit Working Papers.",
+        "Analyzed and Prepared Working Audit Papers.",
         "Verification of 300+ supporting cash documents (vouching).",
         "Performed General Ledger (GL) reconciliation and verifying balances.",
         "On-site audits at 7 client companies, includes inventory, assets, and cash opname.",
-        "Preparing management letters to finalize audit procedure.",
+        "Prepared management letters as a finalize audit procedure.",
       ],
     },
     {
@@ -144,11 +144,17 @@ export const SITE_CONTENT: SiteContent = {
       date: "2023 - 2024",
       description: "Actively contributed to several work programs as the Design & Documentation Division Coordinator and Chief Executive",
     },
+    {
+      role: "1st General Treasurer ",
+      organization: "Computer High Intelligent Personal (CHIP) SMAN 5 MADIUN",
+      date: "2021 - 2022",
+      description: "Responsible for managed the organization's financial transparency and prepared detailed monthly financial reports",
+    },
   ],
   projects: [
     {
       name: "Excel-Based Budget Controlling Tool (R&D Project)",
-      summary: "During my internship period as a Finance & Accounting at DAXTRO Ice Machie, I succesfully designed and implemented an integrated Budget Control System using Advanced Excel for 6 divisions. The key features include automated tracking, variance analysis, and help management to built an internal control from reminders to mitigate late reporting and ensure data integrity.",
+      summary: "During my internship period as a Finance & Accounting at DAXTRO Ice Machine, I succesfully designed and implemented an integrated Budget Control System using Advanced Excel for 6 divisions. The key features include automated tracking, variance analysis, and help management to built an internal control from reminders to mitigate late reporting and ensure data integrity.",
       date: "Aug 2025 - Dec 2025",
       image: "/controlb.png",
     },
