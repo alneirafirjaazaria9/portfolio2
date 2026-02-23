@@ -12,7 +12,8 @@ import { SITE_CONTENT, SITE_CONFIG } from "../config/index";
 ---
 
 <Layout title={SITE_CONFIG.title} description={SITE_CONFIG.description}>
-  <main class="space-y-24"> <Hero {...SITE_CONTENT.hero} />
+  
+ <div class="space-y-1"> <Hero {...SITE_CONTENT.hero} />
     <Skills skills={SITE_CONTENT.skills} />
     <Experience experience={SITE_CONTENT.experience} />
     <Organization organization={SITE_CONTENT.organization} />
