@@ -171,7 +171,7 @@ export const SITE_CONTENT: SiteContent = {
       issuer: "Komite Audit Mahasiswa IPB",
       date: "2026",
       summary: "Certificate as Head of the Internal Directorate of KAM IPB 2024/2025.",
-      image: "/internal.png",
+      image: "/internal2.png",
       linkSource: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view",
     },
     {
@@ -203,7 +203,7 @@ export const SITE_CONTENT: SiteContent = {
       issuer: "Komite Audit Mahasiswa IPB",
       date: "2024",
       summary: "Recognized as the 'Best of Head Directorate' for exemplary leadership.",
-      image: "/internal2.png",
+      image: "/kam2.png",
       linkSource: "https://drive.google.com/file/u/1/d/1iFZkzags7uCuf4LVhKm4qXectsAuxrHD/view?usp=drivesdk",
     },
     {
