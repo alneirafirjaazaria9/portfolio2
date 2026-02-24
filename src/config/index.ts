@@ -26,7 +26,7 @@ export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Alneira Firja Azaria",
     specialty: "Accounting | Auditing Enthusiast",
-    summary: "Detail-oriented final-year student of the Bachelor Applied of Accounting at Institut Pertanian Bogor with significant track record of academic improvement. I have interested and experienced in accounting and auditing. I have skills in conducting sharp financial data analysis, managing projects, and leading teams.",
+    summary: "Detail-oriented final-year Applied Accounting student at IPB University with hands-on experience in external audit across for several corporate clients and accounting exposure including budgeting, journal entries, and internal control procedures. Strong analytical skills with proven leadership experience as Head of Internal Directorate at Komite Audit Mahasiswa IPB.",
     email: "/CV_AlneiraFirjaAzaria.pdf",
   },
  // ... di dalam SITE_CONTENT
