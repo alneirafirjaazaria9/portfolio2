@@ -12,24 +12,24 @@ const { organization } = Astro.props;
 <Section text="Organization" href="organization">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     {organization.map((item) => (
-      <div class="group p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-primary/40 transition-all shadow-xl">
-        <div class="flex flex-col mb-4">
-          <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors leading-tight">
+      <div class="group flex flex-col rounded-2xl border border-white/5 bg-neutral-900/50 p-8 transition-all duration-300 hover:border-primary/40 hover:bg-neutral-900">
+        
+        <div class="mb-6">
+          <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors leading-tight mb-2">
             {item.role}
           </h3>
-          <div class="mt-2 flex flex-col gap-1">
-             <p class="text-primary/90 text-sm font-semibold tracking-wide">
-               {item.organization}
-             </p>
-             <p class="text-[11px] text-neutral-500 font-medium tracking-widest uppercase">
-               {item.date}
-             </p>
-          </div>
+          <p class="text-sm font-semibold text-primary/80 uppercase tracking-wider">
+            {item.organization}
+          </p>
+          <p class="text-[11px] text-neutral-500 font-medium tracking-widest mt-1">
+            {item.date}
+          </p>
         </div>
-        <p class="text-neutral-400 text-sm leading-relaxed">
+
+        <p class="text-neutral-400 text-sm leading-relaxed flex-grow">
           {item.description}
         </p>
-      </div>
+              </div>
     ))}
   </div>
 </Section>

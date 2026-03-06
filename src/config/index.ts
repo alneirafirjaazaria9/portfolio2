@@ -53,25 +53,28 @@ export const SITE_CONTENT: SiteContent = {
     ]
   },
   
-  experience: [
+ experience: [
     {
       company: "KAP Mirawati Sensi Idris (Moore Global)",
       position: "Audit Intern",
+      location: "South Jakarta, Jakarta", // Tambahkan field ini
       startDate: "Jan, 2026",
       endDate: "now",
       image: ["/moore.png"],
       summary: [
         "Executed footing procedures on Financial Statement's draft to ensure mathematical accuracy.",
         "Analyzed and prepared Working Audit Paper for current audit engagements.",
+        "Fieldwork audit at client’s company",
         "Performed General Ledger (GL) reconciliation and verifying balances.",
-        "Performed substantive testing by vouching several accounts to source documents.",
-        "Conducted Accounts Receivable (AR) aging analysis.",
-        "Recalculate asset depreciation/amortization.",
+        "Managed and reconciled 500+ supporting documents from third parties and internal departments to ensure complete audit trails for all vouchers.",
+        "Conducted 20+ Accounts Receivable (AR) aging analysis.",
+        "Recalculate 20+ asset depreciation/amortization.",
       ],
     },
     {
       company: "PT Pandu Mahardika Perdana (DAXTRO)",
       position: "Finance & Accounting Intern",
+      location: "Central Jakarta, Jakarta", 
       startDate: "Aug, 2025",
       endDate: "Dec, 2025",
       image: ["/daxtro1.jpeg", "/daxtro2.png"],
@@ -86,6 +89,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "KAP MNK & Partners (Surakarta Branch)",
       position: "Audit Intern",
+      location: "Surakarta, Central Java", 
       startDate: "Jan, 2025",
       endDate: "Jun, 2025",
       image: ["/mnk1.png", "/mnk2.png"],
@@ -101,11 +105,12 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "Komite Audit Mahasiswa",
       position: "Organization Internal Auditor",
+      location: "Bogor, West Java", 
       startDate: "Aug, 2024",
       endDate: "Oct, 2025",
       image: ["/kam3.png", "/kam1.png"],
       summary: [
-               "Create teams audit work programs before the audit process begins.",
+        "Create teams audit work programs before the audit process begins.",
         "Played role as the Person in Charge of Audit activities for 2 Student Organizations.",
         "Analyze and examine evidence of 10+ student activity transactions and other financial documents.",
         "Provided recommendations for improvements to enhance organizational efficiency and effectiveness.",
@@ -114,6 +119,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "Bank Rakyat Indonesia (Persero) Tbk.",
       position: "Unit Administrative Intern",
+      location: "Madiun, East Java", 
       startDate: "Jul, 2023",
       endDate: "Aug, 2023",
       image: ["/bri.png"],
@@ -130,7 +136,7 @@ export const SITE_CONTENT: SiteContent = {
       organization: "Komite Audit Mahasiswa IPB",
       date: "2024 - 2025",
       linkSource: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view",
-      description: "I was trusted to be the Chairman of the Internal Directorate. I have prepared, monitor, and leading 10+ workprograms.",
+      description: "I was trusted to be the Chairman of the Internal Directorate. I have prepared, monitor, and leading 10+ workprograms and monitor performance of 10 staff members in executing work programs.",
     },
     {
       role: "General Secretary ",
@@ -160,7 +166,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       name: "MonifyIPB - Budgeting Website",
-      summary: "MonifyIPB is designed to make it easier for users to monitor and manage monthly budgets to be more efficient and dynamic. Developed the visual identity and user interface for MonifyIPB, an accounting-based budget management platform.",
+      summary: "MonifyIPB is designed to make it easier for users to monitor and manage monthly budgets to be more efficient and dynamic. In this project, I played role as an UI/UX Designer & Conceptualist",
       date: "Oct 2024 - Dec 2024",
       image: "/monify.png",
     },

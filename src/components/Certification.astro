@@ -10,74 +10,69 @@ const { certification } = Astro.props;
 ---
 
 <Section text="Certification" href="certification">
-  <div class="max-h-[650px] overflow-y-auto pr-4 custom-scroll-area">
+  <div class="max-h-[650px] overflow-y-auto pr-4 custom-scroll-area space-y-6">
     {
-      certification.map(({ title, issuer, date, summary, image, linkSource }, index) => {
-        const top = index * 32; 
-        return (
-          <div 
-            style={`top: ${top}px;`} 
-            class="sticky mb-10 rounded-2xl border border-white/5 bg-neutral-900/40 backdrop-blur-md shadow-2xl overflow-hidden transition-all duration-300 hover:border-primary/40 group/card"
-          >
-            <div class="flex flex-col md:flex-row min-h-[320px]">
+      certification.map(({ title, issuer, date, summary, image, linkSource }) => (
+        <div class="group relative overflow-hidden rounded-3xl border border-white/5 bg-neutral-900/40 backdrop-blur-md transition-all duration-300 hover:border-primary/40">
+          <div class="flex flex-col md:flex-row min-h-[250px]">
+            
+            {/* Bagian Konten */}
+            <div class="flex-[1.5] p-8 md:p-10 flex flex-col justify-center">
+              <h3 class="text-primary text-2xl md:text-3xl font-serif font-medium mb-3 leading-tight group-hover:brightness-125 transition-all">
+                {title}
+              </h3>
               
-              <div class="flex-[1.5] p-8 md:p-10 flex flex-col justify-center">
-                <h3 class="text-primary text-2xl md:text-3xl font-serif font-medium mb-3 leading-tight group-hover/card:brightness-125 transition-all">
-                  {title}
-                </h3>
-                
-                <div class="flex items-center gap-3 mb-5">
-                  <span class="text-white/60 text-[10px] font-semibold uppercase tracking-widest bg-primary/10 border border-primary/20 px-2 py-1 rounded">
-                    {issuer}
-                  </span>
-                  <span class="text-white/20">•</span>
-                  <span class="text-white/40 text-sm font-medium">{date}</span>
+              <div class="flex items-center gap-3 mb-5">
+                <span class="text-white/60 text-[10px] font-semibold uppercase tracking-widest bg-primary/10 border border-primary/20 px-2 py-1 rounded">
+                  {issuer}
+                </span>
+                <span class="text-white/20">•</span>
+                <span class="text-white/40 text-sm font-medium">{date}</span>
+              </div>
+
+              <p class="text-neutral-400 text-base leading-relaxed max-w-lg italic">
+                "{summary}"
+              </p>
+              
+              {linkSource && (
+                <div class="mt-8">
+                  <a 
+                    href={linkSource} 
+                    target="_blank" 
+                    class="inline-flex items-center gap-2 text-sm font-medium text-white bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/50 px-5 py-2.5 rounded-full transition-all duration-300 group"
+                  >
+                    View Credential 
+                    <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                  </a>
                 </div>
-
-                <p class="text-neutral/70 text-base leading-relaxed max-w-lg italic">
-                  "{summary}"
-                </p>
-                
-                {linkSource && (
-                  <div class="mt-8">
-                    <a 
-                      href={linkSource} 
-                      target="_blank" 
-                      class="inline-flex items-center gap-2 text-sm font-medium text-white bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/50 px-5 py-2.5 rounded-full transition-all duration-300 group"
-                    >
-                      View Credential 
-                      <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
-                    </a>
-                  </div>
-                )}
-              </div>
-
-              <div class="flex-1 relative min-h-[250px] md:min-h-full overflow-hidden bg-black/60">
-                <img 
-                  src={image} 
-                  alt={title} 
-                  class="absolute inset-0 w-full h-full object-cover object-top border-l border-white/5 transition-transform duration-700 group-hover/card:scale-105" 
-                />
-                <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/20 to-transparent md:block hidden w-32"></div>
-              </div>
-
+              )}
             </div>
+
+            {/* Bagian Gambar */}
+            <div class="flex-1 relative min-h-[200px] md:min-h-full bg-black/60 overflow-hidden">
+              <img 
+                src={image} 
+                alt={title} 
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              />
+              <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/20 to-transparent md:block hidden w-32"></div>
+            </div>
+
           </div>
-        );
-      })
+        </div>
+      ))
     }
   </div>
 </Section>
 
 <style>
-  .custom-scroll-area::-webkit-scrollbar { width: 4px; }
+  .custom-scroll-area::-webkit-scrollbar { width: 6px; }
   .custom-scroll-area::-webkit-scrollbar-track { background: transparent; }
   .custom-scroll-area::-webkit-scrollbar-thumb { 
-    /* Scrollbar menggunakan warna Primary (Maroon) yang sangat tipis */
-    background: rgba(128, 0, 0, 0.3); 
+    background: rgba(168, 28, 28, 0.4); /* Warna maroon primary */
     border-radius: 10px; 
   }
   .custom-scroll-area::-webkit-scrollbar-thumb:hover { 
-    background: rgba(128, 0, 0, 0.6); 
+    background: rgba(168, 28, 28, 0.7); 
   }
 </style>

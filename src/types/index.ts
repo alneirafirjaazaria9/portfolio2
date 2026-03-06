@@ -40,6 +40,8 @@ export interface SkillProps {
 export interface ExperienceProps {
   company: string;
   position: string;
+    location: string;
+
   startDate: string;
   endDate: string;
   summary: string[]; 
