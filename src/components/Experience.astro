@@ -26,8 +26,7 @@ const { experience } = Astro.props;
     </div>
 
     <div class="flex-1 w-full min-h-[400px]">
-      {/* Perhatikan tambahan 'logo' di dalam map parameter di bawah ini */}
-      {experience.map(({ company, position, location, startDate, endDate, summary, image, logo }, index) => (
+      {experience.map(({ company, position, location, startDate, endDate, summary, image }, index) => (
         <div 
           id={`exp-panel-${index}`} 
           class={`exp-panel transition-opacity duration-300 ${index === 0 ? "block opacity-100" : "hidden opacity-0"}`}
@@ -38,17 +37,9 @@ const { experience } = Astro.props;
                 {position}
               </h3>
               
-              {/* Bagian Perusahaan & Logo */}
-              <div class="flex items-center gap-3 mb-4">
-                {logo && (
-                  <div class="w-10 h-10 flex-shrink-0 rounded-full overflow-hidden border border-white/20 bg-white/5 flex items-center justify-center">
-                    <img src={logo} alt={`Logo ${company}`} class="w-full h-full object-cover bg-white" />
-                  </div>
-                )}
-                <h4 class="text-xl font-semibold text-primary">
-                  {company}
-                </h4>
-              </div>
+              <h4 class="mb-4 text-xl font-semibold text-primary">
+                {company}
+              </h4>
               
               <div class="flex flex-wrap gap-3 mb-6">
                 <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs text-white/70 font-medium">
@@ -74,7 +65,6 @@ const { experience } = Astro.props;
               )}
             </div>
 
-            {/* Bagian Gambar (Dikembalikan ke susunan vertikal) */}
             {image && (
               <div class="w-full md:w-80 flex-shrink-0">
                 <div class="flex flex-col gap-4">
