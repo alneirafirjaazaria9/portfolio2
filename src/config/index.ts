@@ -29,8 +29,7 @@ export const SITE_CONTENT: SiteContent = {
     summary: "Detail-oriented final-year Applied Accounting student at IPB University with hands-on experience in external audit across for several corporate clients and accounting exposure including budgeting, journal entries, and internal control procedures. Strong analytical skills with proven leadership experience as Head of Internal Directorate at Komite Audit Mahasiswa IPB.",
     email: "/CV_AlneiraFirjaAzaria.pdf",
   },
- // ... di dalam SITE_CONTENT
- // Di dalam SITE_CONTENT
+  
   skills: {
     technical: [
       { name: "Advanced Excel", level: "Advanced" },
@@ -57,6 +56,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "KAP Mirawati Sensi Idris (Moore Global)",
       position: "Audit Intern",
+      logo: "/logomoore.png",
       location: "South Jakarta, Jakarta", // Tambahkan field ini
       startDate: "Jan, 2026",
       endDate: "now",
@@ -74,6 +74,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "PT Pandu Mahardika Perdana (DAXTRO)",
       position: "Finance & Accounting Intern",
+            logo: "/logodaxtro.png",
       location: "Central Jakarta, Jakarta", 
       startDate: "Aug, 2025",
       endDate: "Dec, 2025",
@@ -89,6 +90,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "KAP MNK & Partners (Surakarta Branch)",
       position: "Audit Intern",
+                  logo: "/logomnk.png",
       location: "Surakarta, Central Java", 
       startDate: "Jan, 2025",
       endDate: "Jun, 2025",
@@ -105,10 +107,11 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "Komite Audit Mahasiswa",
       position: "Organization Internal Auditor",
+                              logo: "/logokam.png",
       location: "Bogor, West Java", 
       startDate: "Aug, 2024",
       endDate: "Oct, 2025",
-      image: ["/kam3.png", "/kam1.png"],
+      image: ["/kam1.png"],
       summary: [
         "Create teams audit work programs before the audit process begins.",
         "Played role as the Person in Charge of Audit activities for 2 Student Organizations.",
@@ -119,6 +122,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "Bank Rakyat Indonesia (Persero) Tbk.",
       position: "Unit Administrative Intern",
+                        logo: "/logobri.png",
       location: "Madiun, East Java", 
       startDate: "Jul, 2023",
       endDate: "Aug, 2023",
