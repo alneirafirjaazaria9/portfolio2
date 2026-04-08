@@ -57,18 +57,19 @@ export const SITE_CONTENT: SiteContent = {
       company: "KAP Mirawati Sensi Idris (Moore Global)",
       position: "Audit Intern",
       logo: "/logomoore.png",
-      location: "South Jakarta, Jakarta", // Tambahkan field ini
+      location: "South Jakarta, Jakarta", 
       startDate: "Jan, 2026",
       endDate: "now",
       image: ["/moore.png"],
       summary: [
+        "Assisted in audit engagements for two corporate clients, including a subsidiary of a publicly listed company and a private company.",
         "Executed footing procedures on Financial Statement's draft to ensure mathematical accuracy.",
+        "Fieldwork audit at client’s company.",
         "Analyzed and prepared Working Audit Paper for current audit engagements.",
-        "Fieldwork audit at client’s company",
         "Performed General Ledger (GL) reconciliation and verifying balances.",
-        "Managed and reconciled 500+ supporting documents from third parties and internal departments to ensure complete audit trails for all vouchers.",
-        "Conducted 20+ Accounts Receivable (AR) aging analysis.",
-        "Recalculate 20+ asset depreciation/amortization.",
+        "Managed and reconciled 500+ supporting documents from third parties to multiple accounts (including cash/bank, AR/AP, inventory, expenses, and Cost of Sales) to ensure transaction validity and supporting documentation completeness",
+        "Conducted 100+ Accounts Receivable (AR) aging analysis.",
+        "Recalculated 20+ asset depreciations and amortizations.",
       ],
     },
     {
@@ -96,7 +97,7 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "Jun, 2025",
       image: ["/mnk1.png", "/mnk2.png"],
       summary: [
-        "Participated in handled audits for over 10+ corporate clients.",
+        "Assisted auditors in handled audits for over 10+ corporate clients (both general audit or special audit).",
         "Analyzed and Prepared Working Audit Papers.",
         "Verification of 300+ supporting cash documents (vouching).",
         "Performed General Ledger (GL) reconciliation and verifying balances.",
