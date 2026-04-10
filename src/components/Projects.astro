@@ -11,11 +11,11 @@ const { projects } = Astro.props;
 ---
 
 <Section text="Projects" href="projects">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
     {projects.map((project, index) => (
-      <div class="group flex flex-col rounded-3xl border border-white/5 bg-[#111111] overflow-hidden transition-all duration-300 hover:border-primary/30 text-left">
+      <div class="group flex flex-col rounded-2xl md:rounded-3xl border border-white/5 bg-[#111111] overflow-hidden transition-all duration-300 hover:border-primary/30">
         
-        {}
+              {}
         <div class="relative w-full aspect-video overflow-hidden border-b border-white/5 bg-neutral-900">
           <Image 
             src={Array.isArray(project.image) ? project.image[0] : project.image} 
@@ -26,33 +26,31 @@ const { projects } = Astro.props;
           />
         </div>
         
-        <div class="p-7 md:p-8 flex flex-col flex-grow">
-          <h3 class="text-xl md:text-2xl font-bold text-white mb-3.5 group-hover:text-primary transition-colors">
+        <div class="p-5 md:p-8 flex flex-col flex-grow text-left">
+          <h3 class="text-lg md:text-2xl font-bold text-white mb-2 md:mb-3.5 group-hover:text-primary transition-colors">
             {project.name}
           </h3>
-          
-          <p class="text-sm md:text-base text-neutral-400 line-clamp-3 mb-8 leading-relaxed flex-grow">
+          <p class="text-xs md:text-base text-neutral-400 line-clamp-3 mb-6 md:mb-8 leading-relaxed flex-grow">
             {project.summary}
           </p>
-          
-          <div class="mt-auto pt-5 border-t border-white/5">
+          <div class="mt-auto pt-4 border-t border-white/5">
             <button 
               data-open-modal={`modal-${index}`}
-              class="open-modal-btn text-xs md:text-sm font-bold text-primary uppercase tracking-[0.2em] hover:text-white transition-colors flex items-center gap-2"
+              class="open-modal-btn text-[10px] md:text-sm font-bold text-primary uppercase tracking-[0.2em] hover:text-white transition-colors flex items-center gap-2"
             >
               View Details <span>→</span>
             </button>
           </div>
         </div>
 
-        {/* MODAL DETAIL */}
-        <dialog id={`modal-${index}`} class="project-modal m-auto w-[95%] max-w-5xl max-h-[90vh] rounded-3xl bg-[#0a0a0a] p-0 text-white backdrop:bg-black/90 border border-white/10 overflow-hidden shadow-2xl">
+              {}
+        <dialog id={`modal-${index}`} class="project-modal m-auto w-[95%] max-w-5xl max-h-[90vh] rounded-2xl md:rounded-3xl bg-[#0a0a0a] p-0 text-white backdrop:bg-black/90 border border-white/10 overflow-hidden shadow-2xl">
           <div class="flex flex-col h-full max-h-[90vh] overflow-y-auto custom-scrollbar">
             
             <div class="relative w-full shrink-0">
               <button 
                 data-close-modal={`modal-${index}`}
-                class="close-modal-btn absolute top-4 right-4 z-10 bg-black/60 backdrop-blur-md p-2.5 rounded-full hover:bg-primary text-white transition-all"
+                class="close-modal-btn absolute top-3 right-3 md:top-4 md:right-4 z-10 bg-black/60 backdrop-blur-md p-2 rounded-full hover:bg-primary text-white transition-all text-xs"
               >✕</button>
               
               <div class="w-full bg-neutral-900 border-b border-white/10 p-2 text-center">
@@ -61,37 +59,39 @@ const { projects } = Astro.props;
                   alt={project.name} 
                   width={1200} 
                   height={600} 
-                  class="w-full h-auto max-h-[450px] object-contain mx-auto rounded-xl" 
+                  class="w-full h-auto max-h-[300px] md:max-h-[450px] object-contain mx-auto rounded-lg md:rounded-xl" 
                  />
               </div>
             </div>
             
-            <div class="p-8 md:p-12 text-left">
-              <h2 class="text-3xl font-bold mb-5">{project.name}</h2>
-              <p class="text-neutral-400 mb-12 text-justify leading-relaxed">{project.summary}</p>
+            <div class="p-6 md:p-12 text-left">
+              <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-5 leading-tight">{project.name}</h2>
+              <p class="text-neutral-400 mb-8 md:mb-12 text-sm md:text-base text-justify leading-relaxed">{project.summary}</p>
               
-              {/* ATAS: Key Features & Skills Applied (2 Kolom) */}
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+              {}
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-10 md:mb-12">
+                {/* Key Features */}
                 <div>
-                  <h4 class="flex items-center gap-2.5 text-xs font-bold text-primary uppercase tracking-[0.2em] mb-6">
-                    <span class="w-5 h-[2px] bg-primary"></span> Key Features
+                  <h4 class="flex items-center gap-2 text-[10px] md:text-xs font-bold text-primary uppercase tracking-widest mb-4 md:mb-6">
+                    <span class="w-4 h-[2px] bg-primary"></span> Key Features
                   </h4>
                   <ul class="space-y-3">
                     {project.features?.map((feature) => (
-                      <li class="flex items-center gap-3 text-sm text-neutral-200">
-                        <span class="w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0"></span> {feature}
+                      <li class="flex items-start gap-3 text-xs md:text-sm text-neutral-200">
+                        <span class="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></span> {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
+              {}
                 <div>
-                  <h4 class="flex items-center gap-2.5 text-xs font-bold text-primary uppercase tracking-[0.2em] mb-6">
-                    <span class="w-5 h-[2px] bg-primary"></span> Skills Applied
+                  <h4 class="flex items-center gap-2 text-[10px] md:text-xs font-bold text-primary uppercase tracking-widest mb-4 md:mb-6">
+                    <span class="w-4 h-[2px] bg-primary"></span> Skills Applied
                   </h4>
                   <div class="flex flex-wrap gap-2">
                     {project.tags?.map((tag) => (
-                      <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] text-neutral-400 uppercase tracking-wider">
+                      <span class="px-2.5 py-1 rounded-md md:rounded-lg bg-white/5 border border-white/10 text-[9px] md:text-[10px] text-neutral-400 uppercase tracking-wider">
                         {tag}
                       </span>
                     ))}
@@ -99,35 +99,37 @@ const { projects } = Astro.props;
                 </div>
               </div>
 
-              {/* TENGAH: Key Outcomes (2 Bilah/Kolom) */}
-              <div class="mb-12">
-                <h4 class="flex items-center gap-2.5 text-xs font-bold text-primary uppercase tracking-[0.2em] mb-6">
-                  <span class="w-5 h-[2px] bg-primary"></span> Key Outcomes
+              {}
+              <div class="mb-10 md:mb-12">
+                <h4 class="flex items-center gap-2 text-[10px] md:text-xs font-bold text-primary uppercase tracking-widest mb-4 md:mb-6">
+                  <span class="w-4 h-[2px] bg-primary"></span> Key Outcomes
                 </h4>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                   {project.outcomes?.map((outcome) => (
-                    <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 flex gap-4 items-start hover:bg-white/[0.04] transition-colors">
-                      <span class="text-2xl shrink-0">{outcome.icon}</span>
+                    <div class="p-4 md:p-5 rounded-xl md:rounded-2xl bg-white/[0.02] border border-white/5 flex gap-3 md:gap-4 items-start">
+                      <span class="text-xl md:text-2xl shrink-0">{outcome.icon}</span>
                       <div>
-                        <span class="text-white font-bold block text-sm mb-1">{outcome.title}</span>
-                        <span class="text-neutral-500 text-xs leading-relaxed">{outcome.desc}</span>
+                        <span class="text-white font-bold block text-xs md:text-sm mb-0.5 md:mb-1">{outcome.title}</span>
+                        <span class="text-neutral-500 text-[10px] md:text-xs leading-relaxed">{outcome.desc}</span>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* BAWAH: Conceptual Logic (Full Width atau Grid) */}
+              {}
               {project.formulas && project.formulas.length > 0 && (
                 <div>
-                  <h4 class="flex items-center gap-2.5 text-xs font-bold text-primary uppercase tracking-[0.2em] mb-6">
-                    <span class="w-5 h-[2px] bg-primary"></span> Conceptual Logic
+                  <h4 class="flex items-center gap-2 text-[10px] md:text-xs font-bold text-primary uppercase tracking-widest mb-4 md:mb-6">
+                    <span class="w-4 h-[2px] bg-primary"></span> Conceptual Logic
                   </h4>
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                     {project.formulas.map((f) => (
-                      <div class="p-4 rounded-xl bg-neutral-900 border border-white/5">
-                        <p class="text-[10px] font-bold text-primary/80 mb-2 uppercase tracking-wide">{f.name}</p>
-                        <code class="text-xs text-white/90 font-mono block break-all">{f.code}</code>
+                      <div class="p-3 md:p-4 rounded-xl bg-neutral-900 border border-white/5">
+                        <p class="text-[9px] md:text-[10px] font-bold text-primary/80 mb-1.5 md:mb-2 uppercase">{f.name}</p>
+                        <code class="text-[10px] md:text-xs text-white/90 font-mono block break-all leading-relaxed bg-black/30 p-2 rounded">
+                          {f.code}
+                        </code>
                       </div>
                     ))}
                   </div>
@@ -140,69 +142,3 @@ const { projects } = Astro.props;
     ))}
   </div>
 </Section>
-
-<script>
-  function setupModals() {
-    const openButtons = document.querySelectorAll('.open-modal-btn');
-    const closeButtons = document.querySelectorAll('.close-modal-btn');
-
-    openButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const modalId = btn.getAttribute('data-open-modal');
-        if (modalId) {
-          const modal = document.getElementById(modalId) as HTMLDialogElement;
-          if (modal) {
-            modal.showModal();
-            document.body.style.overflow = 'hidden';
-          }
-        }
-      });
-    });
-
-    closeButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const modalId = btn.getAttribute('data-close-modal');
-        if (modalId) {
-          const modal = document.getElementById(modalId) as HTMLDialogElement;
-          if (modal) {
-            modal.close();
-            document.body.style.overflow = 'auto';
-          }
-        }
-      });
-    });
-
-    const dialogs = document.querySelectorAll('.project-modal');
-    dialogs.forEach(dialog => {
-      dialog.addEventListener('click', (e) => {
-        if (e.target === dialog) {
-          (dialog as HTMLDialogElement).close();
-          document.body.style.overflow = 'auto';
-        }
-      });
-    });
-  }
-
-  setupModals();
-  document.addEventListener('astro:after-navigation', setupModals);
-</script>
-
-<style>
-  .custom-scrollbar::-webkit-scrollbar { width: 4px; }
-  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-  .custom-scrollbar::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
-  
-  dialog[open] {
-    animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-
-  @keyframes zoom {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-  }
-
-  dialog::backdrop {
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(4px);
-  }
-</style>
