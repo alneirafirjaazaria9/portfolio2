@@ -34,44 +34,50 @@ const { projects } = Astro.props;
             {project.summary}
           </p>
           
-          <div class="mt-auto pt-4 border-t border-white/5 relative z-10">
+            {}
+          <div class="mt-auto pt-4 border-t border-white/5 relative z-20">
             <button 
               type="button"
               data-open-modal={`modal-${index}`}
-              class="open-modal-btn w-full text-left text-[10px] md:text-sm font-bold text-primary uppercase tracking-[0.2em] hover:text-white transition-colors flex items-center gap-2 py-2 cursor-pointer"
+              class="open-modal-btn w-full text-left text-[11px] md:text-sm font-bold text-primary uppercase tracking-[0.2em] hover:text-white transition-all flex items-center gap-2 py-4 cursor-pointer active:scale-95"
             >
-              View Details <span>→</span>
+              View Details <span class="text-lg">→</span>
             </button>
           </div>
         </div>
 
-              {}
-        <dialog id={`modal-${index}`} class="project-modal m-auto w-[95%] max-w-5xl max-h-[90vh] rounded-2xl md:rounded-3xl bg-[#0a0a0a] p-0 text-white backdrop:bg-black/90 border border-white/10 overflow-hidden shadow-2xl focus:outline-none">
-          <div class="flex flex-col h-full max-h-[90vh] overflow-y-auto custom-scrollbar">
+        {/* MODAL DETAIL - FIX POSISI & Z-INDEX */}
+        <dialog 
+          id={`modal-${index}`} 
+          class="project-modal fixed inset-0 m-auto w-[92%] max-w-5xl h-fit max-h-[85vh] rounded-2xl md:rounded-3xl bg-[#0a0a0a] p-0 text-white backdrop:bg-black/95 border border-white/10 overflow-hidden shadow-2xl focus:outline-none z-[9999]"
+        >
+          <div class="flex flex-col h-full max-h-[85vh] overflow-y-auto custom-scrollbar relative">
             
-            <div class="relative w-full shrink-0">
+            {}
+            <div class="sticky top-0 right-0 z-50 flex justify-end p-4 pointer-events-none">
               <button 
                 type="button"
                 data-close-modal={`modal-${index}`}
-                class="close-modal-btn absolute top-3 right-3 md:top-4 md:right-4 z-20 bg-black/60 backdrop-blur-md p-2 rounded-full hover:bg-primary text-white transition-all text-xs cursor-pointer"
-              >✕</button>
-              
-              <div class="w-full bg-neutral-900 border-b border-white/10 p-2 text-center">
+                class="close-modal-btn pointer-events-auto bg-primary p-2 rounded-full text-white shadow-xl active:scale-90 transition-transform"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
+            </div>
+            
+            <div class="px-6 pb-10 md:px-12 md:pb-12 -mt-10">
+              <div class="w-full bg-neutral-900 border border-white/5 rounded-xl overflow-hidden mb-8">
                  <Image 
                   src={Array.isArray(project.image) ? project.image[0] : project.image} 
                   alt={project.name} 
                   width={1200} 
                   height={600} 
-                  class="w-full h-auto max-h-[250px] md:max-h-[450px] object-contain mx-auto rounded-lg md:rounded-xl" 
+                  class="w-full h-auto max-h-[250px] md:max-h-[450px] object-contain mx-auto" 
                  />
               </div>
-            </div>
-            
-            <div class="p-6 md:p-12 text-left">
+
               <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-5 leading-tight">{project.name}</h2>
               <p class="text-neutral-400 mb-8 md:mb-12 text-sm md:text-base text-justify leading-relaxed">{project.summary}</p>
               
-              {/* Features & Skills: Stacked on Mobile, Side-by-Side on Desktop */}
               <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-10 md:mb-12">
                 <div>
                   <h4 class="flex items-center gap-2.5 text-[10px] md:text-xs font-bold text-primary uppercase tracking-widest mb-5">
@@ -100,14 +106,13 @@ const { projects } = Astro.props;
                 </div>
               </div>
 
-              {}
               <div class="mb-10 md:mb-12">
                 <h4 class="flex items-center gap-2.5 text-[10px] md:text-xs font-bold text-primary uppercase tracking-widest mb-5">
                   <span class="w-4 md:w-5 h-[2px] bg-primary"></span> Key Outcomes
                 </h4>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                   {project.outcomes?.map((outcome) => (
-                    <div class="p-4 md:p-5 rounded-xl md:rounded-2xl bg-white/[0.02] border border-white/5 flex gap-3 md:gap-4 items-start hover:bg-white/[0.04] transition-colors">
+                    <div class="p-4 md:p-5 rounded-xl md:rounded-2xl bg-white/[0.02] border border-white/5 flex gap-3 md:gap-4 items-start">
                       <span class="text-xl md:text-2xl shrink-0">{outcome.icon}</span>
                       <div>
                         <span class="text-white font-bold block text-xs md:text-sm mb-0.5 md:mb-1">{outcome.title}</span>
@@ -118,7 +123,6 @@ const { projects } = Astro.props;
                 </div>
               </div>
 
-              {}
               {project.formulas && project.formulas.length > 0 && (
                 <div>
                   <h4 class="flex items-center gap-2.5 text-[10px] md:text-xs font-bold text-primary uppercase tracking-widest mb-5">
@@ -144,17 +148,19 @@ const { projects } = Astro.props;
 
 <script>
   const setupModals = () => {
-    // Gunakan delegasi event di level window agar tidak hilang saat navigasi
     window.onclick = (event) => {
       const target = event.target as HTMLElement;
       
+      // Buka Modal
       const openBtn = target.closest('.open-modal-btn');
       if (openBtn) {
         const modalId = openBtn.getAttribute('data-open-modal');
-        const modal = document.getElementById(modalId!) as HTMLDialogElement;
-        if (modal) {
-          modal.showModal();
-          document.body.style.overflow = 'hidden';
+        if (modalId) {
+          const modal = document.getElementById(modalId) as HTMLDialogElement;
+          if (modal) {
+            modal.showModal();
+            document.body.style.overflow = 'hidden';
+          }
         }
         return;
       }
@@ -162,14 +168,17 @@ const { projects } = Astro.props;
       const closeBtn = target.closest('.close-modal-btn');
       if (closeBtn) {
         const modalId = closeBtn.getAttribute('data-close-modal');
-        const modal = document.getElementById(modalId!) as HTMLDialogElement;
-        if (modal) {
-          modal.close();
-          document.body.style.overflow = 'auto';
+        if (modalId) {
+          const modal = document.getElementById(modalId) as HTMLDialogElement;
+          if (modal) {
+            modal.close();
+            document.body.style.overflow = 'auto';
+          }
         }
         return;
       }
 
+      // Klik Backdrop
       if (target.classList.contains('project-modal')) {
         const modal = target as HTMLDialogElement;
         modal.close();
@@ -189,16 +198,24 @@ const { projects } = Astro.props;
   .custom-scrollbar::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
   
   dialog::backdrop {
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
+  }
+
+  .project-modal {
+    outline: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   dialog[open] {
-    animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: zoom 0.3s ease-out;
   }
 
   @keyframes zoom {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from { transform: translate(-50%, -50%) scale(0.95); opacity: 0; }
+    to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
   }
 </style>
