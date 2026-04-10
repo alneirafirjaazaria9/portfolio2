@@ -8,9 +8,9 @@ export const SITE_CONFIG: SiteConfig = {
   siteLogo: "/aal.png",
   navLinks: [
     { text: "Home", href: "/" },
-        { text: "Skills", href: "#skills" },
+    { text: "Skills", href: "#skills" },
     { text: "Experience", href: "#experience" },
-        { text: "Organization", href: "#organization" },
+    { text: "Organization", href: "#organization" },
     { text: "Projects", href: "#projects" },
     { text: "Certification", href: "#certification" },
   ],
@@ -36,15 +36,13 @@ export const SITE_CONTENT: SiteContent = {
       { name: "Accurate System", level: "Intermediate" },
       { name: "Kledo Accounting", level: "Certified" },
       { name: "Financial Reporting", level: "Intermediate" },
-            { name: "External Audit", level: "Experienced" },
-                        { name: "Internal Audit", level: "Certified" },
+      { name: "External Audit", level: "Experienced" },
+      { name: "Internal Audit", level: "Certified" },
       { name: "Data Analyze", level: "Basic" },
-
-
     ],
     soft: [
-    { name: "Leadership", level: "Expert" },
-     { name: "Time Management", level: "Advanced" },
+      { name: "Leadership", level: "Expert" },
+      { name: "Time Management", level: "Advanced" },
       { name: "Analytical Thinking", level: "Expert" },
       { name: "Communication", level: "Advanced" },
       { name: "Teamwork", level: "Advanced" },
@@ -52,7 +50,7 @@ export const SITE_CONTENT: SiteContent = {
     ]
   },
   
- experience: [
+  experience: [
     {
       company: "KAP Mirawati Sensi Idris (Moore Global)",
       position: "Audit Intern",
@@ -75,7 +73,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "PT Pandu Mahardika Perdana (DAXTRO)",
       position: "Finance & Accounting Intern",
-            logo: "/logodaxtro.png",
+      logo: "/logodaxtro.png",
       location: "Central Jakarta, Jakarta", 
       startDate: "Aug, 2025",
       endDate: "Dec, 2025",
@@ -87,11 +85,12 @@ export const SITE_CONTENT: SiteContent = {
         "Entry 100+ general journal for daily operational transactions in Accurate System (both budgeting, purchasing, payroll, etc.)",
         "Analyzed and recap 20+ transaction of disbursement activities and budget realization of the company divisions.",
       ],
+      certificateLink: "https://drive.google.com/file/d/1ifj-vACvaOgtmBF-EbTK8541VOT1dPpW/view",
     },
     {
       company: "KAP MNK & Partners (Surakarta Branch)",
       position: "Audit Intern",
-                  logo: "/logomnk.png",
+      logo: "/logomnk.png",
       location: "Surakarta, Central Java", 
       startDate: "Jan, 2025",
       endDate: "Jun, 2025",
@@ -104,11 +103,12 @@ export const SITE_CONTENT: SiteContent = {
         "On-site audits at 7 client companies, includes inventory, assets, and cash opname.",
         "Prepared management letters as a finalize audit procedure.",
       ],
+      certificateLink: "https://drive.google.com/file/d/1jYGw4AKwBT9hx4Z8gwP1nUQG6wIG1mtZ/view",
     },
     {
       company: "Komite Audit Mahasiswa",
       position: "Organization Internal Auditor",
-                              logo: "/logokam.png",
+      logo: "/logokam.png",
       location: "Bogor, West Java", 
       startDate: "Aug, 2024",
       endDate: "Oct, 2025",
@@ -119,11 +119,12 @@ export const SITE_CONTENT: SiteContent = {
         "Analyze and examine evidence of 10+ student activity transactions and other financial documents.",
         "Provided recommendations for improvements to enhance organizational efficiency and effectiveness.",
       ],
+      certificateLink: "https://drive.google.com/file/d/1jYGw4AKwBT9hx4Z8gwP1nUQG6wIG1mtZ/view"
     },
     {
       company: "Bank Rakyat Indonesia (Persero) Tbk.",
       position: "Unit Administrative Intern",
-                        logo: "/logobri.png",
+      logo: "/logobri.png",
       location: "Madiun, East Java", 
       startDate: "Jul, 2023",
       endDate: "Aug, 2023",
@@ -133,6 +134,7 @@ export const SITE_CONTENT: SiteContent = {
         "Manage document archives from office units.",
         "Assisted in unit bookkeeping process.",
       ],
+      certificateLink: "https://drive.google.com/file/u/1/d/1tMTLu41ROb7G-JVJ4LN357JDp0vVKlJq/view?usp=drivesdk",
     },
   ],
   organization: [
@@ -140,26 +142,30 @@ export const SITE_CONTENT: SiteContent = {
       role: "Head of Internal Directorate",
       organization: "Komite Audit Mahasiswa IPB",
       date: "2024 - 2025",
-      linkSource: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view",
       description: "I was trusted to be the Chairman of the Internal Directorate. I have prepared, monitor, and leading 10+ workprograms and monitor performance of 10 staff members in executing work programs.",
+      certificateLink: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view",
     },
     {
-      role: "General Secretary ",
+      role: "General Secretary",
       organization: "Paguyuban Sedulur Madiun (PASMAD) IPB",
       date: "2024 - 2025",
       description: "Managed all administrative activities and serving as the right hand of the organization",
     },
     {
-      role: "Staff of Internal Department ",
+      role: "Staff of Internal Department",
       organization: "HIMAVO AKMAPESA IPB",
       date: "2023 - 2024",
       description: "Actively contributed to several work programs as the Design & Documentation Division Coordinator and Chief Executive",
+            certificateLink: "https://drive.google.com/file/d/1ZHsjzZ5DRr4kUSMZ4-2sZxDzy2IiNQ2X/view",
+
     },
     {
-      role: "1st General Treasurer ",
+      role: "1st General Treasurer",
       organization: "Computer High Intelligent Personal (CHIP) SMAN 5 MADIUN",
       date: "2021 - 2022",
       description: "Responsible for managed the organization's financial transparency and prepared detailed monthly financial reports",
+                  certificateLink: "https://drive.google.com/file/u/1/d/1dX21VN0S-xs_i34W8Ld7JF1cjLQuv-w-/view?usp=drive_open",
+
     },
   ],
   projects: [
@@ -183,23 +189,7 @@ export const SITE_CONTENT: SiteContent = {
       date: "2026",
       summary: "Certificate as Head of the Internal Directorate of KAM IPB 2024/2025.",
       image: "/internal2.png",
-      linkSource: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view",
-    },
-    {
-      title: "Finance & Accounting Intern",
-      issuer: "DAXTRO Ice Machine",
-      date: "2025",
-      summary: "Certified proficiency in financial statement analysis and corporate budgeting controls.",
-      image: "/daxtro3.png",
-      linkSource: "https://drive.google.com/file/d/1ifj-vACvaOgtmBF-EbTK8541VOT1dPpW/view",
-    },
-    {
-      title: "Audit Intern Certification",
-      issuer: "KAP MNK & Partners Surakarta",
-      date: "2025",
-      summary: "Certified for the successful completion of the Audit Internship program.",
-      image: "/mnk2.png",
-      linkSource: "https://drive.google.com/file/d/1jYGw4AKwBT9hx4Z8gwP1nUQG6wIG1mtZ/view",
+      linkSource: "",
     },
     {
       title: "Internal Audit Training Certification",
@@ -225,13 +215,5 @@ export const SITE_CONTENT: SiteContent = {
       image: "/kledo.png",
       linkSource: "https://drive.google.com/file/u/1/d/1wW276kzbyuJX_BpKBqvRghIT_GBWhsig/view?usp=drive_open",
     },
-    {
-      title: "Unit Administrator Intern",
-      issuer: "Bank Rakyat Indonesia (Persero) Tbk.",
-      date: "2023",
-      summary: "Gained hands-on experience in banking administration and transaction verification.",
-      image: "/bri2.jpeg",
-      linkSource: "https://drive.google.com/file/u/1/d/1tMTLu41ROb7G-JVJ4LN357JDp0vVKlJq/view?usp=drivesdk",
-    },
-  ], // Ini adalah penutup array certification
-}; 
+  ],
+};

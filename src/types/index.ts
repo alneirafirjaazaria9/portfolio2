@@ -30,6 +30,7 @@ export interface ExperienceProps {
   summary: string[];
   logo?: string;
   image?: string | string[];
+  certificateLink?: string;
 }
 
 export interface OrganizationProps {
@@ -38,7 +39,9 @@ export interface OrganizationProps {
   date: string;
   description: string;
   linkSource?: string;
+  certificateLink?: string;
 }
+
 
 export interface ProjectProps {
   name: string;
