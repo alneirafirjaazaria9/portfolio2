@@ -1,7 +1,7 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Alneira Firja Azaria — Accounting/Audit Enthusiast",
+  title: "Alneira Firja Azaria — Accounting/Auditing Enthusiast",
   author: "Alneira Firja Azaria",
   description: "A final-year Accounting student at IPB University with strong analytical skills and extensive internship experience in accounting/finance and auditing.",
   lang: "en",
@@ -59,13 +59,14 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Jan, 2026",
       endDate: "now",
       image: ["/moore.png"],
-      summary: [
+      summary: 
+      [
         "Assisted in audit engagements for two corporate clients, including a subsidiary of a publicly listed company and a private company.",
         "Executed footing procedures on Financial Statement's draft to ensure mathematical accuracy.",
         "Fieldwork audit at client’s company.",
         "Analyzed and prepared Working Audit Paper for current audit engagements.",
         "Performed General Ledger (GL) reconciliation and verifying balances.",
-        "Managed and reconciled 500+ supporting documents from third parties to multiple accounts (including cash/bank, AR/AP, inventory, expenses, and Cost of Sales) to ensure transaction validity and supporting documentation completeness",
+        "Managed and reconciled 500+ supporting documents from third parties to multiple accounts to ensure transaction validity and supporting documentation completeness",
         "Conducted 100+ Accounts Receivable (AR) aging analysis.",
         "Recalculated 20+ asset depreciations and amortizations.",
       ],
@@ -119,7 +120,7 @@ export const SITE_CONTENT: SiteContent = {
         "Analyze and examine evidence of 10+ student activity transactions and other financial documents.",
         "Provided recommendations for improvements to enhance organizational efficiency and effectiveness.",
       ],
-      certificateLink: "https://drive.google.com/file/d/1jYGw4AKwBT9hx4Z8gwP1nUQG6wIG1mtZ/view"
+      certificateLink: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view"
     },
     {
       company: "Bank Rakyat Indonesia (Persero) Tbk.",

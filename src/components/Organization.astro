@@ -14,7 +14,7 @@ const { organization } = Astro.props;
     {organization.map(({ role, organization: orgName, date, description, certificateLink, photos }) => (
       <div class="group flex flex-col h-full rounded-2xl border border-white/10 bg-[#161616]/50 p-6 md:p-8 transition-colors duration-300 hover:border-primary/50">
         
-        {/* Bagian Header: Tanpa Tombol Sertifikat */}
+        {/* Bagian Header */}
         <div class="mb-1">
           <h3 class="text-xl font-bold text-white leading-tight">
             {role}
@@ -33,9 +33,9 @@ const { organization } = Astro.props;
           {description}
         </p>
 
-        {/* TOMBOL SERTIFIKAT: Di tengah bawah summary, diperbesar */}
+        {/* TOMBOL SERTIFIKAT: Ditambahkan mt-auto agar selalu lurus di bawah */}
         {certificateLink && (
-          <div class="flex justify-center mb-6">
+          <div class="mt-auto flex justify-center mb-6">
             <a 
               href={certificateLink} 
               target="_blank" 
@@ -54,7 +54,7 @@ const { organization } = Astro.props;
 
         {/* DOKUMENTASI KEGIATAN */}
         {photos && photos.length > 0 && (
-          <div class="mt-auto grid grid-cols-3 gap-3 pt-2">
+          <div class={`${!certificateLink ? "mt-auto" : ""} grid grid-cols-3 gap-3 pt-2`}>
             {photos.slice(0, 3).map((imgUrl) => (
               <div class="relative overflow-hidden rounded-xl border border-white/10 aspect-[4/3] w-full shadow-md transition-all duration-500 group-hover:border-primary/30">
                 <img 
