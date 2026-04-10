@@ -1,6 +1,5 @@
 // src/types/index.ts
 
-// 1. Definisikan dulu props untuk setiap komponen
 export interface HeroProps {
   name: string;
   specialty: string;
@@ -43,14 +42,23 @@ export interface OrganizationProps {
   photos?: string[];
 }
 
-
 export interface ProjectProps {
   name: string;
   summary: string;
   image: string | string[];
+  link?: string;
   date?: string;
-  linkPreview?: string;
-  linkSource?: string;
+  tags?: string[];
+  features?: string[];
+  outcomes?: {
+    icon: string;
+    title: string;
+    desc: string;
+  }[];
+  formulas?: {
+    name: string;
+    code: string;
+  }[];
 }
 
 export interface CertificationProps {
@@ -67,7 +75,6 @@ export interface HeaderProps {
   navLinks: { text: string; href: string }[];
 }
 
-// 2. Gabungkan ke dalam SiteContent
 export interface SiteContent {
   hero: HeroProps;
   skills: { technical: SkillProps[]; soft: SkillProps[] };
@@ -77,7 +84,6 @@ export interface SiteContent {
   certification: CertificationProps[];
 }
 
-// 3. Konfigurasi Site utama
 export interface SiteConfig extends HeaderProps {
   title: string;
   description: string;

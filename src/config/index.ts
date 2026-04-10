@@ -61,8 +61,8 @@ export const SITE_CONTENT: SiteContent = {
       image: ["/moore.png"],
       summary: 
       [
-        "Assisted in audit engagements for two corporate clients, including a subsidiary of a publicly listed company and a private company.",
-        "Executed footing procedures on Financial Statement's draft to ensure mathematical accuracy.",
+        "Assisted auditor in audit engagements for two corporate clients, including a subsidiary of a publicly listed company and a private company.",
+        "Executed footing and tie up procedures on Financial Statement's draft to ensure mathematical accuracy.",
         "Fieldwork audit at client’s company.",
         "Analyzed and prepared Working Audit Paper for current audit engagements.",
         "Performed General Ledger (GL) reconciliation and verifying balances.",
@@ -145,7 +145,8 @@ export const SITE_CONTENT: SiteContent = {
       date: "2024 - 2025",
       description: "I was trusted to be the Chairman of the Internal Directorate. I have prepared, monitor, and leading 10+ workprograms and monitor performance of 10 staff members in executing work programs.",
       certificateLink: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view",
-photos: ["/internal.png", "/internal2.png", "/kam4.jpeg"],    },
+      photos: ["/internal.png", "/internal2.png", "/kam4.jpeg"],    
+    },
     {
       role: "General Secretary",
       organization: "Paguyuban Sedulur Madiun (PASMAD) IPB",
@@ -153,39 +154,72 @@ photos: ["/internal.png", "/internal2.png", "/kam4.jpeg"],    },
       description: "Managed all administrative activities and serving as the right hand of the organization",
       photos: ["/pasmad1.jpeg", "/pasmad2.jpeg", "/pasmad3.jpeg"], 
       certificateLink: "https://drive.google.com/file/u/1/d/1dX21VN0S-xs_i34W8Ld7JF1cjLQuv-w-/view?usp=drive_open",
-
     },
     {
       role: "Staff of Internal Department",
       organization: "HIMAVO AKMAPESA IPB",
       date: "2023 - 2024",
       description: "Actively contributed to several work programs as the Design & Documentation Division Coordinator and Chief Executive",
-            certificateLink: "https://drive.google.com/file/d/1ZHsjzZ5DRr4kUSMZ4-2sZxDzy2IiNQ2X/view",
-
+            photos: ["/akma1.jpeg", "/akma2.jpeg", "/akma3.jpeg"], 
+      certificateLink: "https://drive.google.com/file/d/1ZHsjzZ5DRr4kUSMZ4-2sZxDzy2IiNQ2X/view",
     },
     {
       role: "1st General Treasurer",
       organization: "Computer High Intelligent Personal (CHIP) SMAN 5 MADIUN",
       date: "2021 - 2022",
       description: "Responsible for managed the organization's financial transparency and prepared detailed monthly financial reports",
-                  certificateLink: "https://drive.google.com/file/u/1/d/1dX21VN0S-xs_i34W8Ld7JF1cjLQuv-w-/view?usp=drive_open",
-
+                  photos: ["/chip1.jpeg", "/chip2.jpeg"], 
+      certificateLink: "https://drive.google.com/file/u/1/d/1dX21VN0S-xs_i34W8Ld7JF1cjLQuv-w-/view?usp=drive_open",
     },
   ],
+  
   projects: [
     {
       name: "Excel-Based Budget Controlling Tool (R&D Project)",
-      summary: "During my internship period as a Finance & Accounting at DAXTRO Ice Machine, I succesfully designed and implemented an integrated Budget Control System using Advanced Excel for 6 divisions. The key features include automated tracking, variance analysis, and help management to built an internal control from reminders to mitigate late reporting and ensure data integrity.",
+      summary: "During my internship at DAXTRO, I developed an Excel-based Budget Control System for all divisions to automate tracking and variance analysis. Beyond calculation, the tool serves as an internal control mechanism—incorporating automated reminders and data validation to mitigate late realization reporting to ensure financial data integrity.",
       date: "Aug 2025 - Dec 2025",
       image: "/controlb.png",
+      link: "https://link-ke-google-drive-kamu.com", 
+      features: [
+        "Automated Tracking", 
+        "Budget Variance Analysis", 
+        "Internal Control Reminders"
+      ],
+      outcomes: [
+        { icon: "⏱️", title: "Improved reporting compliance", desc: "Late reporting frequency decreased significantly within 4 months." },
+        { icon: "📊", title: "Enhanced management oversight", desc: "System became the primary tool for monthly budget evaluation meetings." },
+        { icon: "🎯", title: "Real-time budget visibility", desc: "Management can track remaining division at any time." },
+        { icon: "⚠️", title: "Early warning system", desc: "Visual indicators (red/yellow/green) enable proactive follow-up." }
+      ],
+      formulas: [
+        { name: 'Status Pencairan Anggaran', code: '=IF(VLOOKUP(Desc)=MonthlyTotal, "Selesai", "Sebagian")' },
+        { name: 'Tanggal Jatuh Tempo', code: '=WORKDAY(Tanggal_Selesai, 3)' },
+        { name: 'Realisasi Anggaran', code: '=IF(ISBLANK(Date), "N/A", IF(Date<Due, "OnTime", "Late"))' },
+        { name: 'Selisih (Variance)', code: '=(Actual_Budget - Budget)' },
+        { name: 'Saldo Akhir Anggaran', code: '=(Monthly_Budget - Actual_Budget)' }
+      ],
+      tags: ["Advanced Excel", "Financial Analysis", "Budgeting", "Internal Audit"]
     },
     {
       name: "MonifyIPB - Budgeting Website",
-      summary: "MonifyIPB is designed to make it easier for users to monitor and manage monthly budgets to be more efficient and dynamic. In this project, I played role as an UI/UX Designer & Conceptualist",
+      summary: "MonifyIPB is an Accounting Information System designed to streamline budget management. As UI/UX Designer & Lead Conceptualist, I translated bookkeeping principles and internal control frameworks into an intuitive digital experience, ensuring financial monitoring remains rigorous yet accessible.",
       date: "Oct 2024 - Dec 2024",
       image: "/monify.png",
+      link: "https://link-demo-monify.com",
+      features: [
+        "Interactive Dashboard",
+        "Dynamic Expense Categorization",
+        "Overbudget Warning Notification"
+      ],
+      outcomes: [
+        { icon: "🎨", title: "Intuitive UI/UX", desc: "Designed user-friendly interfaces to enhance user engagement for financial activities." },
+        { icon: "📊", title: "Optimized Financial Data Visualization", desc: "Transformed complex accounting datasets into intuitive graphical representations, facilitating rapid financial health assessments." },
+        { icon: "🛡️", title: "Mitigated Overexpenditure", desc: "Conceptualized a proactive warning system that effectively reduced discretionary spending through automated threshold notifications." }
+      ],
+      tags: ["UI/UX Design", "Budgeting", "Accounting Information System", "System Analyst"]
     },
   ],
+  
   certification: [
     {
       title: "Internal Audit Training Certification",
