@@ -14,26 +14,11 @@ const { organization } = Astro.props;
     {organization.map(({ role, organization: orgName, date, description, certificateLink, photos }) => (
       <div class="group flex flex-col h-full rounded-2xl border border-white/10 bg-[#161616]/50 p-6 md:p-8 transition-colors duration-300 hover:border-primary/50">
         
-        <div class="flex justify-between items-start gap-4 mb-1">
+        {/* Bagian Header: Tanpa Tombol Sertifikat */}
+        <div class="mb-1">
           <h3 class="text-xl font-bold text-white leading-tight">
             {role}
           </h3>
-          
-          {certificateLink && (
-            <a 
-              href={certificateLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="flex-shrink-0 flex items-center justify-center w-8 h-8 rounded-full border border-white/10 bg-white/5 text-white/50 hover:bg-white/10 hover:text-white transition-all duration-300"
-              title="View Certificate"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          )}
         </div>
 
         <h4 class="font-semibold text-primary uppercase text-sm tracking-wide mb-1">
@@ -48,6 +33,26 @@ const { organization } = Astro.props;
           {description}
         </p>
 
+        {/* TOMBOL SERTIFIKAT: Di tengah bawah summary, diperbesar */}
+        {certificateLink && (
+          <div class="flex justify-center mb-6">
+            <a 
+              href={certificateLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-6 py-2.5 w-full rounded-xl border border-white/10 bg-white/5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:border-primary/40 hover:scale-[1.02]"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              View Certificate
+            </a>
+          </div>
+        )}
+
+        {/* DOKUMENTASI KEGIATAN */}
         {photos && photos.length > 0 && (
           <div class="mt-auto grid grid-cols-3 gap-3 pt-2">
             {photos.slice(0, 3).map((imgUrl) => (
@@ -55,13 +60,12 @@ const { organization } = Astro.props;
                 <img 
                   src={imgUrl} 
                   alt={orgName} 
-                  class="object-cover w-full h-full transition-transform duration-500 hover:scale-110 grayscale-[20%] hover:grayscale-0" 
+                  class="object-cover w-full h-full transition-transform duration-500 hover:scale-110" 
                 />
               </div>
             ))}
           </div>
         )}
-
       </div>
     ))}
   </div>

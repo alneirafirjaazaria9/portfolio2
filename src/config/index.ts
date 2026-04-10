@@ -151,6 +151,8 @@ photos: ["/internal.png", "/internal2.png", "/kam4.jpeg"],    },
       date: "2024 - 2025",
       description: "Managed all administrative activities and serving as the right hand of the organization",
       photos: ["/pasmad1.jpeg", "/pasmad2.jpeg", "/pasmad3.jpeg"], 
+      certificateLink: "https://drive.google.com/file/u/1/d/1dX21VN0S-xs_i34W8Ld7JF1cjLQuv-w-/view?usp=drive_open",
+
     },
     {
       role: "Staff of Internal Department",
