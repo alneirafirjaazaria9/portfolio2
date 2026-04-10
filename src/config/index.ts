@@ -144,12 +144,13 @@ export const SITE_CONTENT: SiteContent = {
       date: "2024 - 2025",
       description: "I was trusted to be the Chairman of the Internal Directorate. I have prepared, monitor, and leading 10+ workprograms and monitor performance of 10 staff members in executing work programs.",
       certificateLink: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view",
-    },
+photos: ["/internal.png", "/internal2.png", "/kam4.jpeg"],    },
     {
       role: "General Secretary",
       organization: "Paguyuban Sedulur Madiun (PASMAD) IPB",
       date: "2024 - 2025",
       description: "Managed all administrative activities and serving as the right hand of the organization",
+      photos: ["/pasmad1.jpeg", "/pasmad2.jpeg", "/pasmad3.jpeg"], 
     },
     {
       role: "Staff of Internal Department",
@@ -183,14 +184,6 @@ export const SITE_CONTENT: SiteContent = {
     },
   ],
   certification: [
-    {
-      title: "Head of Internal Directorate 2024/2025",
-      issuer: "Komite Audit Mahasiswa IPB",
-      date: "2026",
-      summary: "Certificate as Head of the Internal Directorate of KAM IPB 2024/2025.",
-      image: "/internal2.png",
-      linkSource: "",
-    },
     {
       title: "Internal Audit Training Certification",
       issuer: "Kantor Audit Internal IPB",

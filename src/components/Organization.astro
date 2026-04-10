@@ -11,16 +11,14 @@ const { organization } = Astro.props;
 
 <Section text="Organization" href="organization">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {organization.map(({ role, organization: orgName, date, description, certificateLink }) => (
-      <div class="group flex flex-col justify-start rounded-2xl border border-white/10 bg-[#161616]/50 p-6 md:p-8 transition-colors duration-300 hover:border-primary/50">
+    {organization.map(({ role, organization: orgName, date, description, certificateLink, photos }) => (
+      <div class="group flex flex-col h-full rounded-2xl border border-white/10 bg-[#161616]/50 p-6 md:p-8 transition-colors duration-300 hover:border-primary/50">
         
-        {/* Bagian Header: Judul Jabatan & Tombol Link */}
         <div class="flex justify-between items-start gap-4 mb-1">
           <h3 class="text-xl font-bold text-white leading-tight">
             {role}
           </h3>
           
-          {/* Tombol Bulat Sertifikat */}
           {certificateLink && (
             <a 
               href={certificateLink} 
@@ -46,9 +44,23 @@ const { organization } = Astro.props;
           {date}
         </p>
         
-        <p class="text-sm text-neutral text-justify leading-relaxed">
+        <p class="text-sm text-neutral text-justify leading-relaxed mb-6">
           {description}
         </p>
+
+        {photos && photos.length > 0 && (
+          <div class="mt-auto grid grid-cols-3 gap-3 pt-2">
+            {photos.slice(0, 3).map((imgUrl) => (
+              <div class="relative overflow-hidden rounded-xl border border-white/10 aspect-[4/3] w-full shadow-md transition-all duration-500 group-hover:border-primary/30">
+                <img 
+                  src={imgUrl} 
+                  alt={orgName} 
+                  class="object-cover w-full h-full transition-transform duration-500 hover:scale-110 grayscale-[20%] hover:grayscale-0" 
+                />
+              </div>
+            ))}
+          </div>
+        )}
 
       </div>
     ))}

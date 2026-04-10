@@ -40,6 +40,7 @@ export interface OrganizationProps {
   description: string;
   linkSource?: string;
   certificateLink?: string;
+  photos?: string[];
 }
 
 
