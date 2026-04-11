@@ -129,7 +129,7 @@ export const SITE_CONTENT: SiteContent = {
       date: "2024 - 2025",
       description: "As Chairman of the Internal Directorate, I led 10 staff members in executing 10+ work programs while serving as the PIC for internal audit activities. I specialized in analyzing financial transactions and developing audit programs to provide strategic recommendations to enhanced organizational efficiency and effectiveness.",
       certificateLink: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view",
-      photos: ["/internal.png", "/internal2.png", "/kam4.jpeg"],    
+      photos: ["/kam3.png", "/internal2.png", "/kam4.jpeg"],    
     },
     {
       role: "General Secretary",
