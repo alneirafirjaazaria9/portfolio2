@@ -10,27 +10,32 @@ const { certification } = Astro.props;
 ---
 
 <Section text="Certification" href="certification">
-  <div class="max-h-[650px] overflow-y-auto pr-4 custom-scroll-area space-y-6">
+  <div class="max-h-[700px] overflow-y-auto pr-2 custom-scroll-area space-y-8">
     {
       certification.map(({ title, issuer, date, summary, image, linkSource }) => (
-        <div class="group relative overflow-hidden rounded-3xl border border-white/5 bg-neutral-900/40 backdrop-blur-md transition-all duration-300 hover:border-primary/40">
-          <div class="flex flex-col md:flex-row min-h-[250px]">
+        /* Card: Diubah ke putih dengan border abu-abu tipis */
+        <div class="group relative overflow-hidden rounded-[2rem] border border-neutral-200 bg-white transition-all duration-500 hover:shadow-xl hover:shadow-neutral-200/50">
+          <div class="flex flex-col md:flex-row items-stretch min-h-[300px]">
             
-            {/* Bagian Konten */}
-            <div class="flex-[1.5] p-8 md:p-10 flex flex-col justify-center">
-              <h3 class="text-primary text-2xl md:text-3xl font-serif font-medium mb-3 leading-tight group-hover:brightness-125 transition-all">
+            {/* Content Side: Teks diubah ke gelap agar kontras dengan background putih */}
+            <div class="flex-[1.5] p-8 md:p-12 flex flex-col justify-center relative z-10">
+              
+              <div class="flex flex-wrap items-center gap-4 mb-6">
+                {/* Badge Issuer: Warna abu-abu netral sesuai tema minimalis */}
+                <span class="px-3 py-1 rounded-lg bg-neutral-100 border border-neutral-200 text-[10px] font-bold text-neutral-600 uppercase tracking-widest">
+                  {issuer}
+                </span>
+                <span class="text-[11px] font-bold text-neutral-400 tracking-tighter tracking-widest">
+                  // {date}
+                </span>
+              </div>
+
+              {/* Judul: Hitam pekat untuk penekanan utama */}
+              <h3 class="text-2xl md:text-4xl font-black text-neutral-900 tracking-tighter leading-[1.1] mb-5 transition-colors duration-300">
                 {title}
               </h3>
               
-              <div class="flex items-center gap-3 mb-5">
-                <span class="text-white/60 text-[10px] font-semibold uppercase tracking-widest bg-primary/10 border border-primary/20 px-2 py-1 rounded">
-                  {issuer}
-                </span>
-                <span class="text-white/20">•</span>
-                <span class="text-white/40 text-sm font-medium">{date}</span>
-              </div>
-
-              <p class="text-neutral-400 text-base leading-relaxed max-w-lg italic">
+              <p class="text-sm md:text-base text-neutral-500 leading-relaxed max-w-lg italic font-medium opacity-90">
                 "{summary}"
               </p>
               
@@ -39,23 +44,24 @@ const { certification } = Astro.props;
                   <a 
                     href={linkSource} 
                     target="_blank" 
-                    class="inline-flex items-center gap-2 text-sm font-medium text-white bg-white/5 hover:bg-primary/20 border border-white/10 hover:border-primary/50 px-5 py-2.5 rounded-full transition-all duration-300 group"
+                    class="inline-flex items-center gap-3 text-[10px] font-black text-neutral-900 uppercase tracking-[0.3em] group/link border-b border-black/10 pb-1 hover:border-black transition-all"
                   >
                     View Credential 
-                    <span class="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
+                    <span class="transform transition-transform group-hover/link:translate-x-2">→</span>
                   </a>
                 </div>
               )}
             </div>
 
-            {/* Bagian Gambar */}
-            <div class="flex-1 relative min-h-[200px] md:min-h-full bg-black/60 overflow-hidden">
+            {/* Image Side: Gradient disesuaikan agar menyatu dengan card putih */}
+            <div class="flex-1 relative min-h-[250px] md:min-h-full overflow-hidden border-t md:border-t-0 md:border-l border-neutral-100">
               <img 
                 src={image} 
                 alt={title} 
-                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
               />
-              <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/20 to-transparent md:block hidden w-32"></div>
+              {/* Overlay Gradient: Dari putih ke transparan */}
+              <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent via-white/5 to-white pointer-events-none"></div>
             </div>
 
           </div>
@@ -66,13 +72,14 @@ const { certification } = Astro.props;
 </Section>
 
 <style>
-  .custom-scroll-area::-webkit-scrollbar { width: 6px; }
+  
+  .custom-scroll-area::-webkit-scrollbar { width: 4px; }
   .custom-scroll-area::-webkit-scrollbar-track { background: transparent; }
   .custom-scroll-area::-webkit-scrollbar-thumb { 
-    background: rgba(168, 28, 28, 0.4); /* Warna maroon primary */
+    background: #e5e7eb; 
     border-radius: 10px; 
   }
-  .custom-scroll-area::-webkit-scrollbar-thumb:hover { 
-    background: rgba(168, 28, 28, 0.7); 
+  .custom-scroll-area:hover::-webkit-scrollbar-thumb { 
+    background: #d1d5db; 
   }
 </style>

@@ -4,11 +4,21 @@
   --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
   --font-serif: "Gabarito Variable", ui-serif, serif;
 
-  --color-primary: #a81c1c;
-  --color-neutral: #94a3b8;
-  --color-white: #f8fafc;
-  --color-black: #080808;
+  /* --- PERUBAHAN WARNA MINIMALIS --- */
+  /* Primary kita ubah dari merah ke Hitam Pekat untuk aksen minimalis */
+  --color-primary: #000000; 
+  /* Neutral diganti ke abu-abu yang lebih soft untuk deskripsi */
+  --color-neutral: #64748b; 
+  /* White diganti ke Pure White untuk background */
+  --color-white: #ffffff;
+  /* Black tetap ada untuk teks utama */
+  --color-black: #0f172a;
+  
+  /* Tambahkan warna background abu-abu sangat muda untuk section body */
+  --color-bg-light: #f8fafc;
+  --color-border-light: #e2e8f0;
 
+  /* --- TYPOGRAPHY (Tetap sama, hanya penyesuaian sedikit jika perlu) --- */
   --text-xs: 0.875rem;
   --text-xs--line-height: 1.125rem;
   --text-sm: 1rem;
@@ -29,12 +39,6 @@
   --text-5xl--line-height: 3rem;
   --text-6xl: 3rem;
   --text-6xl--line-height: 3.625rem;
-  --text-7xl: 3.75rem;
-  --text-7xl--line-height: 1;
-  --text-8xl: 4.5rem;
-  --text-8xl--line-height: 4.875rem;
-  --text-9xl: 6rem;
-  --text-9xl--line-height: 6.625rem;
 
   --tracking-tightest: -2px;
   --tracking-tighter: -1px;
@@ -43,11 +47,13 @@
   --animate-slide-in: slide-in 600ms ease both;
 
   @keyframes slide-in {
-    10% {
-      transform: translateY(-100%);
+    0% { /* Perbaikan: start dari 0% bukan 10% agar smooth */
+      transform: translateY(-20px);
+      opacity: 0;
     }
     100% {
       transform: translateY(0);
+      opacity: 1;
     }
   }
 }

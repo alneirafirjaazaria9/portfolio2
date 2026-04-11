@@ -3,14 +3,14 @@ interface Props {
   text: string;
   href: string;
 }
-
 const { text, href } = Astro.props;
 ---
-
-<section id={href} class="py-16 my-8 border border-white/10 bg-white/5 rounded-3xl px-8 md:px-12 shadow-sm">
-  <h2
-    class="mb-14 font-montserrat text-4xl font-bold tracking-tighter text-white md:text-5xl"
-  >
+<section 
+  id={href} 
+  class="py-10 my-6 border border-neutral-200 bg-white rounded-[2rem] px-8 md:px-12 shadow-sm shadow-neutral-100/50"
+>
+  <h2 class="mb-8 font-black text-3xl md:text-5xl tracking-tightest text-neutral-900">
+    <span class="block text-[9px] uppercase tracking-[0.4em] text-neutral-400 mb-2 font-bold">// {text}</span>
     {text}
   </h2>
   <slot />

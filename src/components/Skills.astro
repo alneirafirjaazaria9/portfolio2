@@ -9,42 +9,56 @@ interface Props {
 const { skills } = Astro.props;
 ---
 
-<section id="skills" class="pt-10 pb-0">
-  <div class="mb-6">
-    <h2 class="text-4xl font-bold text-white">Skills</h2>
-    <p class="text-slate-400 mt-2">Technical expertise and interpersonal strengths.</p>
+<section id="skills" class="py-12 border border-neutral-200 bg-white rounded-[2.5rem] px-8 md:px-16 shadow-sm shadow-neutral-100/50">
+  <div class="mb-14">
+    <h2 class="text-4xl md:text-6xl font-black tracking-tightest text-neutral-900 leading-none">
+      <span class="block text-[10px] uppercase tracking-[0.5em] text-neutral-400 mb-4 font-bold">
+        // Capabilities
+      </span>
+      Skills
+    </h2>
+    <p class="text-neutral-500 mt-4 text-sm md:text-base font-medium max-w-9xl">
+      Technical expertise and interpersonal strengths developed through academic rigor and professional experience.
+    </p>
   </div>
 
-<div class="rounded-3xl border border-white/5 bg-neutral-900/20 p-8 backdrop-blur-sm space-y-10">    
-    <div>
-      <h3 class="text-xl font-semibold text-primary mb-5 flex items-center gap-2">
-        <span class="h-px w-8 bg-primary"></span> Technical Skills
+  <div class="space-y-12">    
+    {/* Technical Skills Section */}
+    <div class="space-y-6">
+      <h3 class="text-[10px] font-black text-black uppercase tracking-[0.4em] flex items-center gap-3">
+        <span class="h-[2px] w-8 bg-black"></span> Technical Skills
       </h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {skills.technical.map((skill) => (
-          <div class="group relative overflow-hidden rounded-xl border border-white/5 bg-white/[0.03]/50 p-5 transition-all hover:border-primary/50">
-            <div class="absolute left-0 top-0 h-full w-1 bg-primary opacity-0 transition-opacity group-hover:opacity-100"></div>
-            <h4 class="font-bold text-white group-hover:text-primary transition-colors">{skill.name}</h4>
-            <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider">{skill.level}</p>
+          <div class="group relative overflow-hidden rounded-2xl border border-neutral-100 bg-neutral-50 p-6 transition-all duration-500 hover:bg-white hover:shadow-xl hover:shadow-neutral-200/40">
+            <h4 class="font-black text-neutral-900 group-hover:text-black transition-colors text-base tracking-tight">
+              {skill.name}
+            </h4>
+            <p class="text-[10px] text-neutral-400 mt-1 uppercase font-bold tracking-[0.2em]">
+              {skill.level}
+            </p>
           </div>
         ))}
       </div>
     </div>
 
-    <div>
-      <h3 class="text-xl font-semibold text-primary mb-5 flex items-center gap-2">
-        <span class="h-px w-8 bg-primary"></span> Soft Skills
+    {/* Soft Skills Section */}
+    <div class="space-y-6">
+      <h3 class="text-[10px] font-black text-black uppercase tracking-[0.4em] flex items-center gap-3">
+        <span class="h-[2px] w-8 bg-black"></span> Soft Skills
       </h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {skills.soft.map((skill) => (
-          <div class="group relative overflow-hidden rounded-xl border border-white/5 bg-white/[0.03]/50 p-5 transition-all hover:border-primary/50">
-            <div class="absolute left-0 top-0 h-full w-1 bg-primary opacity-0 transition-opacity group-hover:opacity-100"></div>
-            <h4 class="font-bold text-white group-hover:text-primary transition-colors">{skill.name}</h4>
-            <p class="text-xs text-slate-500 mt-1 uppercase tracking-wider">{skill.level}</p>
+          <div class="group relative overflow-hidden rounded-2xl border border-neutral-100 bg-neutral-50 p-6 transition-all duration-500 hover:bg-white hover:shadow-xl hover:shadow-neutral-200/40">
+            <h4 class="font-black text-neutral-900 group-hover:text-black transition-colors text-base tracking-tight">
+              {skill.name}
+            </h4>
+            <p class="text-[10px] text-neutral-400 mt-1 uppercase font-bold tracking-[0.2em]">
+              {skill.level}
+            </p>
           </div>
         ))}
       </div>
     </div>
-
   </div>
 </section>

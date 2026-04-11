@@ -28,7 +28,6 @@ const canonicalURL = "";
     />
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    {/* Penyesuaian viewport agar lebih stabil di mobile */}
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -38,9 +37,10 @@ const canonicalURL = "";
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
   </head>
-  <body class="bg-black font-montserrat text-white selection:bg-primary/30 overflow-x-hidden">
-      {/* Background gradient tetap halus */}
-      <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_farthest-side_at_top_right,rgba(128,0,0,0.05),transparent)]"></div>
+  
+  <body class="bg-white font-sans text-black selection:bg-neutral-200 overflow-x-hidden">
+    
+    <div class="fixed inset-0 -z-10 bg-[#fafafa]"></div>
     
     <Header siteLogo={siteLogo} navLinks={navLinks} />
     
@@ -49,12 +49,25 @@ const canonicalURL = "";
     </main>
 
     <style is:global>
-      /* Solusi Fix Modal Kepotong di HP: Menggunakan dvh (Dynamic Viewport Height) */
+      /* Reset scrollbar biar minimalis */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #999;
+      }
+
+      /* Fix Modal untuk Light Mode */
       :root {
         --modal-height: 85vh;
       }
-
-      /* Jika browser mendukung dvh (browser modern di HP), gunakan itu */
       @supports (height: 100dvh) {
         :root {
           --modal-height: 85dvh;
@@ -63,11 +76,9 @@ const canonicalURL = "";
 
       .project-modal {
         max-height: var(--modal-height) !important;
-      }
-
-      /* Fix scrollbar agar tidak "balapan" dengan browser */
-      .custom-scrollbar {
-        -webkit-overflow-scrolling: touch;
+        background-color: white !important;
+        color: black !important;
+        border: 1px solid #e5e7eb !important;
       }
     </style>
   </body>

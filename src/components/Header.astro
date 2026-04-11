@@ -7,42 +7,42 @@ interface Props {
 const { siteLogo, navLinks } = Astro.props;
 ---
 
-<header id="navbar" class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 transition-transform duration-300">
-  <div class="flex items-center gap-6 rounded-full border border-white/10 bg-black/60 px-6 py-3 backdrop-blur-md shadow-lg w-full max-w-4xl justify-between">
+<header id="navbar" class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 transition-transform duration-500">
+  <div class="flex items-center gap-6 rounded-full border border-neutral-200 bg-white/80 px-6 py-2.5 backdrop-blur-xl shadow-sm w-full max-w-3xl justify-between">
     
     <div class="flex items-center gap-4">
       <a href="/" class="flex items-center gap-3 group">
         <img 
           src={siteLogo} 
           alt="Logo" 
-          class="h-8 w-8 rounded-full border border-primary object-cover transition-transform group-hover:scale-110"
+          class="h-7 w-7 rounded-full border border-neutral-200 object-cover transition-transform group-hover:rotate-12"
         />
-        <span class="hidden font-gabarito text-sm font-bold text-white sm:block transition-colors group-hover:text-primary">
+        <span class="hidden font-sans text-[11px] font-black uppercase tracking-widest text-neutral-900 sm:block">
           Alneira
         </span>
       </a>
 
-      <div class="h-4 w-[1px] bg-white/20 hidden sm:block"></div>
+      <div class="h-4 w-[1px] bg-neutral-200 hidden sm:block"></div>
 
-      <div class="flex items-center gap-3 text-lg text-neutral-400">
-        <a href="https://linkedin.com/in/alneirafirjaazaria" target="_blank" class="hover:text-primary transition-colors">
+      {}
+      <div class="flex items-center gap-3 text-base text-neutral-500">
+        <a href="https://linkedin.com/in/alneirafirjaazaria" target="_blank" class="hover:text-black transition-colors">
           <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://" target="_blank" class="hover:text-primary transition-colors">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://github.com/alneirafirjaazaria9" target="_blank" class="hover:text-primary transition-colors">
+        <a href="https://github.com/alneirafirjaazaria9" target="_blank" class="hover:text-black transition-colors">
           <i class="fa-brands fa-github"></i>
         </a>
       </div>
     </div>
 
     <nav>
-      <ul class="flex items-center gap-6 text-sm font-medium text-neutral-400">
+      <ul class="flex items-center gap-5 text-[11px] font-black uppercase tracking-widest text-neutral-500">
         {navLinks.map((link) => (
           <li>
-            <a href={link.href} class="transition-all duration-300 hover:text-primary">
+            <a href={link.href} class="transition-all duration-300 hover:text-black relative group/link">
               {link.text}
+      {}
+              <span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-black transition-all duration-300 group-hover/link:w-full"></span>
             </a>
           </li>
         ))}
@@ -58,15 +58,15 @@ const { siteLogo, navLinks } = Astro.props;
   window.addEventListener("scroll", () => {
     if (navbar) {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop && scrollTop > 50) {
-        navbar.style.transform = "translateY(-150%)";
+      // Berikan efek hide yang lebih smooth
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+        navbar.style.transform = "translateY(-200%)";
       } else {
         navbar.style.transform = "translateY(0)";
       }
       lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     }
-  });
+  }, { passive: true });
 </script>
 
-<div class="h-24"></div>
+<div class="h-20"></div>
