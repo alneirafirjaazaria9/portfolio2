@@ -211,7 +211,7 @@ export const SITE_CONTENT: SiteContent = {
       date: "2024",
       summary: "Successfully completed a comprehensive internal audit training program.",
       image: "/kam1.png",
-      linkSource: "https://drive.google.com/file/d/1jYGw4AKwBT9hx4Z8gwP1nUQG6wIG1mtZ/view",
+      linkSource: "https://drive.google.com/open?id=14erCI3gPdTP5CGjfUww9YEGPlwiWYVgA&authuser=1",
     },
     {
       title: "Awardee as Best of Head Directorate 2024",
