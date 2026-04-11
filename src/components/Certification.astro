@@ -22,11 +22,11 @@ const { certification } = Astro.props;
               
               <div class="flex flex-wrap items-center gap-4 mb-6">
             {}
-                <span class="px-3 py-1 rounded-lg bg-neutral-100 border border-neutral-200 text-[10px] font-bold text-neutral-600 uppercase tracking-widest">
+                <span class="px-3 py-1 rounded-lg bg-neutral-100 border border-neutral-200 text-[11px] font-bold text-neutral-600 uppercase tracking-widest">
                   {issuer}
                 </span>
-                <span class="text-[11px] font-bold text-neutral-400 tracking-tighter tracking-widest">
-                  // {date}
+                <span class="px-3 py-1 rounded-lg bg-neutral-100 border border-neutral-200 text-[11px] font-bold text-neutral-600 uppercase tracking-widest">
+                 {date}
                 </span>
               </div>
 
@@ -35,7 +35,7 @@ const { certification } = Astro.props;
                 {title}
               </h3>
               
-              <p class="text-sm md:text-base text-neutral-500 leading-relaxed max-w-lg italic font-medium opacity-90">
+              <p class="text-sm md:text-base text-neutral-500 leading-relaxed max-w-lg font-medium opacity-90">
                 "{summary}"
               </p>
               
@@ -44,7 +44,7 @@ const { certification } = Astro.props;
                   <a 
                     href={linkSource} 
                     target="_blank" 
-                    class="inline-flex items-center gap-3 text-[10px] font-black text-neutral-900 uppercase tracking-[0.3em] group/link border-b border-black/10 pb-1 hover:border-black transition-all"
+                    class="inline-flex items-center gap-3 text-[12px] font-black text-neutral-900 uppercase tracking-[0.3em] group/link border-b border-black/10 pb-1 hover:border-black transition-all"
                   >
                     View Credential 
                     <span class="transform transition-transform group-hover/link:translate-x-2">→</span>
