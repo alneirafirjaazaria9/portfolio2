@@ -107,22 +107,6 @@ export const SITE_CONTENT: SiteContent = {
       certificateLink: "https://drive.google.com/file/d/1jYGw4AKwBT9hx4Z8gwP1nUQG6wIG1mtZ/view",
     },
     {
-      company: "Komite Audit Mahasiswa",
-      position: "Organization Internal Auditor",
-      logo: "/logokam.png",
-      location: "Bogor, West Java", 
-      startDate: "Aug, 2024",
-      endDate: "Oct, 2025",
-      image: ["/kam1.png"],
-      summary: [
-        "Create teams audit work programs before the audit process begins.",
-        "Played role as the Person in Charge of Audit activities for 2 Student Organizations.",
-        "Analyze and examine evidence of 10+ student activity transactions and other financial documents.",
-        "Provided recommendations for improvements to enhance organizational efficiency and effectiveness.",
-      ],
-      certificateLink: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view"
-    },
-    {
       company: "Bank Rakyat Indonesia (Persero) Tbk.",
       position: "Unit Administrative Intern",
       logo: "/logobri.png",
@@ -140,10 +124,10 @@ export const SITE_CONTENT: SiteContent = {
   ],
   organization: [
     {
-      role: "Head of Internal Directorate",
+      role: "Head of Internal Directorate/Internal Auditor",
       organization: "Komite Audit Mahasiswa IPB",
       date: "2024 - 2025",
-      description: "I was trusted to be the Chairman of the Internal Directorate. I have prepared, monitor, and leading 10+ workprograms and monitor performance of 10 staff members in executing work programs.",
+      description: "As Chairman of the Internal Directorate, I led 10 staff members in executing 10+ work programs while serving as the PIC for internal audit activities. I specialized in analyzing financial transactions and developing audit programs to provide strategic recommendations to enhanced organizational efficiency and effectiveness.",
       certificateLink: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view",
       photos: ["/internal.png", "/internal2.png", "/kam4.jpeg"],    
     },
@@ -151,7 +135,7 @@ export const SITE_CONTENT: SiteContent = {
       role: "General Secretary",
       organization: "Paguyuban Sedulur Madiun (PASMAD) IPB",
       date: "2024 - 2025",
-      description: "Managed all administrative activities and serving as the right hand of the organization",
+      description: "As the General Secretary, I orchestrated the organization's administrative infrastructure and standardized internal documentation processes. I managed official correspondence and database records for all work programs",
       photos: ["/pasmad1.jpeg", "/pasmad2.jpeg", "/pasmad3.jpeg"], 
       certificateLink: "https://drive.google.com/file/u/1/d/1dX21VN0S-xs_i34W8Ld7JF1cjLQuv-w-/view?usp=drive_open",
     },
