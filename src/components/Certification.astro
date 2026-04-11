@@ -13,15 +13,15 @@ const { certification } = Astro.props;
   <div class="max-h-[700px] overflow-y-auto pr-2 custom-scroll-area space-y-8">
     {
       certification.map(({ title, issuer, date, summary, image, linkSource }) => (
-        /* Card: Diubah ke putih dengan border abu-abu tipis */
+        
         <div class="group relative overflow-hidden rounded-[2rem] border border-neutral-200 bg-white transition-all duration-500 hover:shadow-xl hover:shadow-neutral-200/50">
           <div class="flex flex-col md:flex-row items-stretch min-h-[300px]">
             
-            {/* Content Side: Teks diubah ke gelap agar kontras dengan background putih */}
+            {}
             <div class="flex-[1.5] p-8 md:p-12 flex flex-col justify-center relative z-10">
               
               <div class="flex flex-wrap items-center gap-4 mb-6">
-                {/* Badge Issuer: Warna abu-abu netral sesuai tema minimalis */}
+            {}
                 <span class="px-3 py-1 rounded-lg bg-neutral-100 border border-neutral-200 text-[10px] font-bold text-neutral-600 uppercase tracking-widest">
                   {issuer}
                 </span>
@@ -30,7 +30,7 @@ const { certification } = Astro.props;
                 </span>
               </div>
 
-              {/* Judul: Hitam pekat untuk penekanan utama */}
+            {}
               <h3 class="text-2xl md:text-4xl font-black text-neutral-900 tracking-tighter leading-[1.1] mb-5 transition-colors duration-300">
                 {title}
               </h3>
@@ -53,14 +53,14 @@ const { certification } = Astro.props;
               )}
             </div>
 
-            {/* Image Side: Gradient disesuaikan agar menyatu dengan card putih */}
+            {}
             <div class="flex-1 relative min-h-[250px] md:min-h-full overflow-hidden border-t md:border-t-0 md:border-l border-neutral-100">
               <img 
                 src={image} 
                 alt={title} 
                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
               />
-              {/* Overlay Gradient: Dari putih ke transparan */}
+            {}
               <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-transparent via-white/5 to-white pointer-events-none"></div>
             </div>
 
