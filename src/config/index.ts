@@ -32,20 +32,21 @@ export const SITE_CONTENT: SiteContent = {
   
   skills: {
     technical: [
-      { name: "Advanced Excel", level: "Advanced" },
-      { name: "Accurate System", level: "Intermediate" },
-      { name: "Kledo Accounting", level: "Certified" },
+      { name: "Intermediate Ms. Excel", level: "Certified" },
+      { name: "Accurate Accounting System", level: "Intermediate" },
+      { name: "Kledo Accounting System", level: "Certified" },
       { name: "Financial Reporting", level: "Intermediate" },
       { name: "External Audit", level: "Experienced" },
       { name: "Internal Audit", level: "Certified" },
-      { name: "Data Analyze", level: "Basic" },
+      { name: "Data Analyze", level: "Certified" },
     ],
     soft: [
       { name: "Leadership", level: "Expert" },
-      { name: "Time Management", level: "Advanced" },
+      { name: "Time Management", level: "Experienced" },
+      { name: "Adaptability", level: "Experienced" },
       { name: "Analytical Thinking", level: "Expert" },
-      { name: "Communication", level: "Advanced" },
-      { name: "Teamwork", level: "Advanced" },
+      { name: "Communication", level: "Experienced" },
+      { name: "Team Collaboration", level: "Experienced" },
       { name: "Problem Solving", level: "Expert" },
     ]
   },
@@ -80,7 +81,7 @@ export const SITE_CONTENT: SiteContent = {
       endDate: "Dec, 2025",
       image: ["/daxtro1.jpeg", "/daxtro2.png"],
       summary: [
-        "Designed a controlling budget tools based on Advanced Microsoft Excel for 6 office divisions.",
+        "Designed a controlling budget tools based on advanced Microsoft Excel for all office divisions.",
         "Internal audits, include stock opname of 30+ spareparts.",
         "Create a Standard Operational Procedure (SOP) of submission budgeting.",
         "Entry 100+ general journal for daily operational transactions in Accurate System (both budgeting, purchasing, payroll, etc.)",
@@ -129,14 +130,14 @@ export const SITE_CONTENT: SiteContent = {
       date: "2024 - 2025",
       description: "As Chairman of the Internal Directorate, I led 10 staff members in executing 10+ work programs while serving as the PIC for internal audit activities. I specialized in analyzing financial transactions and developing audit programs to provide strategic recommendations to enhanced organizational efficiency and effectiveness.",
       certificateLink: "https://drive.google.com/file/d/1PkXJJ1dB13P8g0q0XYC2ZfgHOxcMj0gl/view",
-      photos: ["/kam3.png", "/internal2.png", "/kam4.jpeg"],    
+      photos: ["/kam3.png", "/internal2.png"],    
     },
     {
       role: "General Secretary",
       organization: "Paguyuban Sedulur Madiun (PASMAD) IPB",
       date: "2024 - 2025",
       description: "As the General Secretary, I orchestrated the organization's administrative infrastructure and standardized internal documentation processes. I managed official correspondence and database records for all work programs",
-      photos: ["/pasmad1.jpeg", "/pasmad2.jpeg", "/pasmad3.jpeg"], 
+      photos: ["/pasmad1.jpeg", "/pasmad2.jpeg"], 
       certificateLink: "https://drive.google.com/file/u/1/d/1dX21VN0S-xs_i34W8Ld7JF1cjLQuv-w-/view?usp=drive_open",
     },
     {
@@ -144,7 +145,7 @@ export const SITE_CONTENT: SiteContent = {
       organization: "HIMAVO AKMAPESA IPB",
       date: "2023 - 2024",
       description: "Actively contributed to several work programs as the Design & Documentation Division Coordinator and Chief Executive",
-            photos: ["/akma1.jpeg", "/akma2.jpeg", "/akma3.jpeg"], 
+            photos: ["/akma1.jpeg", "/akma3.jpeg"], 
       certificateLink: "https://drive.google.com/file/d/1ZHsjzZ5DRr4kUSMZ4-2sZxDzy2IiNQ2X/view",
     },
     {
@@ -205,6 +206,14 @@ export const SITE_CONTENT: SiteContent = {
   ],
   
   certification: [
+   {
+      title: "Microsoft Excel Bootcamp Certification",
+      issuer: "Karirnex",
+      date: "2026",
+      summary: "Completed an intensive 2-week certification focused on advanced data modeling and business intelligence with INTERMEDIATE predicate.",
+      image: "/karirnexcel.png",
+      linkSource: "https://drive.google.com/file/d/1z3Ff9n4hl6O9L5hvSOAgLrqtQzdunPRo/view",
+    },
     {
       title: "Internal Audit Training Certification",
       issuer: "Kantor Audit Internal IPB",

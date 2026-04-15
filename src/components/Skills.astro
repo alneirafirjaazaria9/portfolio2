@@ -14,48 +14,43 @@ const { skills } = Astro.props;
     <h2 class="text-4xl md:text-6xl font-black tracking-tightest text-neutral-900 leading-none">
       Skills
     </h2>
-    <p class="text-neutral-500 mt-4 text-sm md:text-base font-medium max-w-9xl">
+    <p class="text-neutral-500 mt-4 text-sm md:text-base font-medium max-w-4xl">
       Technical expertise and interpersonal strengths developed through academic rigor and professional experience.
     </p>
   </div>
 
-  <div class="space-y-12">    
-    {/* Technical Skills Section */}
+  {/* SPLIT VIEW: 2 Kolom Utama */}
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+    
+    {/* SISI KIRI: SOFT SKILLS */}
     <div class="space-y-6">
-      <h3 class="text-[15px] font-black text-black uppercase tracking-[0.4em] flex items-center gap-3">
-        <span class="h-[2px] w-8 bg-black"></span> Technical Skills
+      <h3 class="text-[13px] font-black text-black uppercase tracking-[0.4em] flex items-center gap-3">
+        <span class="h-[1.5px] w-8 bg-black"></span> Soft Skills
       </h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {skills.technical.map((skill) => (
-          <div class="group relative overflow-hidden rounded-2xl border border-neutral-100 bg-neutral-50 p-6 transition-all duration-500 hover:bg-white hover:shadow-xl hover:shadow-neutral-200/40">
-            <h4 class="font-black text-neutral-900 group-hover:text-black transition-colors text-base tracking-tight">
-              {skill.name}
-            </h4>
-            <p class="text-[10px] text-neutral-400 mt-1 uppercase font-bold tracking-[0.2em]">
-              {skill.level}
-            </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {skills.soft.map((skill) => (
+          <div class="group p-4 bg-neutral-50 border border-neutral-100 rounded-xl hover:border-black hover:bg-white transition-all duration-300">
+            <h4 class="font-bold text-neutral-900 text-sm tracking-tight">{skill.name}</h4>
+            <p class="text-[9px] text-neutral-400 mt-0.5 uppercase font-black tracking-widest">{skill.level}</p>
           </div>
         ))}
       </div>
     </div>
 
-    {/* Soft Skills Section */}
+    {/* SISI KANAN: TECHNICAL SKILLS */}
     <div class="space-y-6">
-      <h3 class="text-[15px] font-black text-black uppercase tracking-[0.4em] flex items-center gap-3">
-        <span class="h-[2px] w-8 bg-black"></span> Soft Skills
+      <h3 class="text-[13px] font-black text-black uppercase tracking-[0.4em] flex items-center gap-3">
+        <span class="h-[1.5px] w-8 bg-black"></span> Technical Skills
       </h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {skills.soft.map((skill) => (
-          <div class="group relative overflow-hidden rounded-2xl border border-neutral-100 bg-neutral-50 p-6 transition-all duration-500 hover:bg-white hover:shadow-xl hover:shadow-neutral-200/40">
-            <h4 class="font-black text-neutral-900 group-hover:text-black transition-colors text-base tracking-tight">
-              {skill.name}
-            </h4>
-            <p class="text-[10px] text-neutral-400 mt-1 uppercase font-bold tracking-[0.2em]">
-              {skill.level}
-            </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {skills.technical.map((skill) => (
+          <div class="group p-4 bg-neutral-50 border border-neutral-100 rounded-xl hover:border-black hover:bg-white transition-all duration-300">
+            <h4 class="font-bold text-neutral-900 text-sm tracking-tight">{skill.name}</h4>
+            <p class="text-[9px] text-neutral-400 mt-0.5 uppercase font-black tracking-widest">{skill.level}</p>
           </div>
         ))}
       </div>
     </div>
+
   </div>
 </section>
