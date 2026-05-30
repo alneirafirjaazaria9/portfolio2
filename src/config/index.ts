@@ -55,14 +55,13 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "KAP Mirawati Sensi Idris (Moore Global)",
       position: "Audit Intern",
+      description: "Assisted auditor in audit engagements for two corporate clients.",
       logo: "/logomoore.png",
       location: "South Jakarta, Jakarta", 
       startDate: "Jan, 2026",
       endDate: "May, 2026",
       image: ["/moore.png", "/moore2.png"],
-      summary: 
-      [
-        "Assisted auditor in audit engagements for two corporate clients, including a subsidiary of a publicly listed company and a private company.",
+      summary: [
         "Conducted analytical reviews on appriximately 15+ financial statement accounts within the Audit Working Paper to identify trends, inconsistencies, and investigation.",
         "Fieldwork audit at client’s company.",
         "Prepared and filling Working Audit Paper for current audit engagements.",
@@ -71,11 +70,12 @@ export const SITE_CONTENT: SiteContent = {
         "Conducted 100+ Accounts Receivable (AR) aging analysis.",
         "Recalculated 100+ asset depreciations and amortizations.",
       ],
-            certificateLink: "https://drive.google.com/file/d/1ifj-vACvaOgtmBF-EbTK8541VOT1dPpW/view",
+      certificateLink: "https://drive.google.com/file/d/1ifj-vACvaOgtmBF-EbTK8541VOT1dPpW/view",
     },
     {
       company: "PT Pandu Mahardika Perdana (DAXTRO)",
       position: "Finance & Accounting Intern",
+      description: "Optimized divisional budget controls via automated Excel tools, managed daily data entries, and assisted in asset internal audits.",
       logo: "/logodaxtro.png",
       location: "Central Jakarta, Jakarta", 
       startDate: "Aug, 2025",
@@ -93,6 +93,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "KAP MNK & Partners (Surakarta Branch)",
       position: "Audit Intern",
+      description: "Assisted in corporate external audits by executing substantive accounts testing, ledger reconciliation, and on-site fieldwork.",
       logo: "/logomnk.png",
       location: "Surakarta, Central Java", 
       startDate: "Jan, 2025",
@@ -111,6 +112,7 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "Bank Rakyat Indonesia (Persero) Tbk.",
       position: "Unit Administrative Intern",
+      description: "Supported banking unit operations by verifying transaction records, organizing document archives, and assisting with daily bookkeeping.",
       logo: "/logobri.png",
       location: "Madiun, East Java", 
       startDate: "Jul, 2023",
@@ -146,7 +148,7 @@ export const SITE_CONTENT: SiteContent = {
       organization: "HIMAVO AKMAPESA IPB",
       date: "2023 - 2024",
       description: "Actively contributed to several work programs as the Design & Documentation Division Coordinator and Chief Executive",
-            photos: ["/akma1.jpeg", "/akma3.jpeg"], 
+      photos: ["/akma1.jpeg", "/akma3.jpeg"], 
       certificateLink: "https://drive.google.com/file/d/1ZHsjzZ5DRr4kUSMZ4-2sZxDzy2IiNQ2X/view",
     },
     {
@@ -154,7 +156,7 @@ export const SITE_CONTENT: SiteContent = {
       organization: "Computer High Intelligent Personal (CHIP) SMAN 5 MADIUN",
       date: "2021 - 2022",
       description: "Responsible for managed the organization's financial transparency and prepared detailed monthly financial reports",
-                  photos: ["/chip1.jpeg", "/chip2.jpeg"], 
+      photos: ["/chip1.jpeg", "/chip2.jpeg"], 
       certificateLink: "https://drive.google.com/file/u/1/d/1dX21VN0S-xs_i34W8Ld7JF1cjLQuv-w-/view?usp=drive_open",
     },
   ],
