@@ -1,6 +1,5 @@
 ---
 import Section from "./Section.astro";
-import { Image } from "astro:assets";
 import type { ProjectProps } from "@types";
 
 interface Props {
@@ -13,15 +12,16 @@ const { projects } = Astro.props;
 <Section text="Projects" href="projects">
   <div id="projects-main-container" class="relative overflow-hidden w-full">
     
-    <div id="projects-grid" class="w-full flex flex-col gap-6 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]">
+    <div id="projects-grid" class="w-full flex flex-col gap-6 transition-all duration-500 ease-out">
       {projects.map((project, index) => (
         <div class="group flex flex-col sm:flex-row rounded-2xl border border-neutral-200 bg-white overflow-hidden min-h-[140px] transition-all duration-500 hover:shadow-xl hover:shadow-neutral-200/40">
           
           <div class="relative w-full sm:w-1/4 min-w-[120px] sm:min-w-[180px] md:min-w-[220px] h-48 sm:h-auto overflow-hidden bg-neutral-100 flex-shrink-0">
-            <Image 
-              src={Array.isArray(project.image) ? project.image[0] : project.image} 
-              alt={project.name} width={500} height={350} 
+            <img 
+              src={project.image} 
+              alt={project.name}
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              loading="lazy"
             />
           </div>
           
@@ -51,21 +51,21 @@ const { projects } = Astro.props;
     {projects.map((project, index) => (
       <div 
         id={`detail-${index}`} 
-        class="project-detail-view hidden absolute top-0 left-0 w-full opacity-0 translate-x-12 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]"
+        class="project-detail-view hidden absolute top-0 left-0 w-full opacity-0 translate-x-8 transition-all duration-500 ease-out"
       >
         <div class="flex mb-6 w-full">
-          <button class="back-to-grid inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-neutral-200 bg-white text-[9px] font-black uppercase tracking-[0.2em] text-neutral-900 hover:bg-black hover:text-white transition-all duration-300 cursor-pointer group shadow-sm shadow-neutral-100">
+          <button type="button" class="back-to-grid inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-neutral-200 bg-white text-[9px] font-black uppercase tracking-[0.2em] text-neutral-900 hover:bg-black hover:text-white transition-all duration-300 cursor-pointer group shadow-sm shadow-neutral-100">
             <span class="text-sm leading-none transition-transform group-hover:-translate-x-0.5">←</span> Back to Projects
           </button>
         </div>
 
         <div class="rounded-[2rem] border border-neutral-200 bg-white p-5 md:p-10 w-full shadow-sm">
           
-          <div class="w-full bg-neutral-100 aspect-video max-h-[450px] rounded-2xl overflow-hidden mb-8 border border-neutral-200/60 shadow-sm">
-             <Image 
-              src={Array.isArray(project.image) ? project.image[0] : project.image} 
-              alt={project.name} width={1200} height={675} 
-              class="w-full h-full object-contain bg-neutral-50" 
+          <div class="w-full bg-neutral-50 aspect-video max-h-[420px] rounded-2xl overflow-hidden mb-8 border border-neutral-200/60 shadow-inner flex items-center justify-center">
+             <img 
+              src={project.image} 
+              alt={project.name}
+              class="max-w-full max-h-full object-contain" 
              />
           </div>
 
@@ -149,54 +149,69 @@ const { projects } = Astro.props;
 </Section>
 
 <script>
-  const setupProjectNavigation = () => {
-    const grid = document.getElementById('projects-grid');
-    const viewBtns = document.querySelectorAll('.view-details-btn');
-    const backBtns = document.querySelectorAll('.back-to-grid');
+  const initProjectManager = () => {
+    const mainGrid = document.getElementById('projects-grid');
+    const triggers = document.querySelectorAll('.view-details-btn');
+    const backButtons = document.querySelectorAll('.back-to-grid');
 
-    viewBtns.forEach(btn => {
+    // Bersihkan sisa-sisa state lama jika ada
+    triggers.forEach(t => {
+      const newTrigger = t.cloneNode(true);
+      t.parentNode?.replaceChild(newTrigger, t);
+    });
+    backButtons.forEach(b => {
+      const newBack = b.cloneNode(true);
+      b.parentNode?.replaceChild(newBack, b);
+    });
+
+    // Ambil ulang elemen pasca-pembersihan kloning
+    const freshTriggers = document.querySelectorAll('.view-details-btn');
+    const freshBackButtons = document.querySelectorAll('.back-to-grid');
+
+    freshTriggers.forEach(btn => {
       btn.addEventListener('click', () => {
-        const targetId = btn.getAttribute('data-project-target');
-        const targetView = document.getElementById(`detail-${targetId}`);
+        const indexId = btn.getAttribute('data-project-target');
+        const targetView = document.getElementById(`detail-${indexId}`);
 
-        grid?.classList.add('-translate-x-12', 'opacity-0', 'pointer-events-none');
+        if (!mainGrid || !targetView) return;
+
+        mainGrid.classList.add('-translate-x-4', 'opacity-0', 'pointer-events-none');
         
         setTimeout(() => {
-          grid?.classList.add('hidden');
-          targetView?.classList.remove('hidden');
+          mainGrid.classList.add('hidden');
+          targetView.classList.remove('hidden');
+          
           requestAnimationFrame(() => {
-            targetView?.classList.remove('opacity-0', 'translate-x-12');
-            targetView?.classList.add('opacity-100', 'translate-x-0');
-            targetView?.classList.remove('absolute');
-            targetView?.classList.add('relative');
+            targetView.classList.remove('opacity-0', 'translate-x-8', 'absolute');
+            targetView.classList.add('opacity-100', 'translate-x-0', 'relative');
           });
-        }, 400);
+        }, 300);
 
-        const section = document.getElementById('projects');
-        section?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
 
-    backBtns.forEach(btn => {
+    freshBackButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        const currentView = btn.closest('.project-detail-view');
-        
-        currentView?.classList.add('opacity-0', 'translate-x-12');
-        currentView?.classList.remove('relative');
-        currentView?.classList.add('absolute');
+        const currentOpenView = btn.closest('.project-detail-view');
+        if (!mainGrid || !currentOpenView) return;
 
+        currentOpenView.classList.add('opacity-0', 'translate-x-8');
+        
         setTimeout(() => {
-          currentView?.classList.add('hidden');
-          grid?.classList.remove('hidden');
+          currentOpenView.classList.add('hidden');
+          currentOpenView.classList.remove('relative');
+          currentOpenView.classList.add('absolute');
+          
+          mainGrid.classList.remove('hidden');
           requestAnimationFrame(() => {
-            grid?.classList.remove('-translate-x-12', 'opacity-0', 'pointer-events-none');
-            grid?.classList.add('translate-x-0');
+            mainGrid.classList.remove('-translate-x-4', 'opacity-0', 'pointer-events-none');
           });
-        }, 400);
+        }, 300);
       });
     });
   };
 
-  setupProjectNavigation();
-  document.addEventListener('astro:after-navigation', setupProjectNavigation);
+  initProjectManager();
+  document.addEventListener('astro:after-navigation', initProjectManager);
 </script>
