@@ -77,7 +77,7 @@ const { projects } = Astro.props;
                 <span class="w-4 h-[1.5px] bg-black"></span> Key Features
               </h4>
               <ul class="space-y-2.5">
-                {(project.features || ['Internal Control', 'Automated Reporting']).map((feature) => (
+                {(project.features || []).map((feature) => (
                   <li class="flex items-start gap-2.5 text-xs text-neutral-600 font-bold leading-snug">
                     <svg class="mt-0.5 flex-shrink-0" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     {feature}
@@ -91,7 +91,7 @@ const { projects } = Astro.props;
                 <span class="w-4 h-[1.5px] bg-black"></span> Skills Applied
               </h4>
               <div class="flex flex-wrap gap-1.5">
-                {(project.tags || ['Accounting', 'Excel', 'Analysis']).map((tag) => (
+                {(project.tags || []).map((tag) => (
                   <span class="px-3 py-1.5 rounded-full bg-neutral-50 border border-neutral-200 text-[12px] text-neutral-500 uppercase font-black tracking-widest hover:bg-white hover:border-black transition-colors">
                     {tag}
                   </span>
@@ -100,19 +100,14 @@ const { projects } = Astro.props;
             </div>
           </div>
 
-          {project.name.toLowerCase().includes('excel') && (
+          {project.formulas && project.formulas.length > 0 && (
             <div class="mb-10 pt-8 border-t border-neutral-100">
               <h4 class="flex items-center gap-3 text-[15px] font-black text-black uppercase tracking-[0.3em] mb-6">
                 <span class="w-4 h-[1.5px] bg-black"></span> Logical Conceptual
               </h4>
               
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {(project.formulas || [
-                  { name: 'Status Pencairan Anggaran', code: '=IF(VLOOKUP(Desc)=MonthlyTotal, "Done", "Partial")' },
-                  { name: 'Tanggal Jatuh Tempo', code: '=WORKDAY(Tanggal_Selesai, 3)' },
-                  { name: 'Realisasi Anggaran', code: '=IF(ISBLANK(Date), "N/A", IF(Date<Due, "OnTime", "Late"))' },
-                  { name: 'Variance Analysis', code: '=(Actual_Budget - Budget)' }
-                ]).map((f) => (
+                {project.formulas.map((f) => (
                   <div class="group p-4 bg-white border border-neutral-200 rounded-xl hover:border-black transition-all duration-300">
                     <p class="text-[10px] text-neutral-400 mb-1.5 uppercase font-black tracking-wider group-hover:text-black transition-colors">{f.name}</p>
                     <code class="text-[12px] font-mono text-neutral-800 break-all leading-relaxed block bg-neutral-50 p-2 rounded-lg border border-neutral-100">
@@ -124,26 +119,28 @@ const { projects } = Astro.props;
             </div>
           )}
 
-          <div class="border-t border-neutral-100 pt-8">
-            <h4 class="flex items-center gap-3 text-[15px] font-black text-black uppercase tracking-[0.3em] mb-6">
-              <span class="w-4 h-[1.5px] bg-black"></span> Key Outcomes
-            </h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {project.outcomes?.map((outcome) => (
-                <div class="p-4 rounded-xl bg-white border border-neutral-100 flex gap-4 items-center hover:shadow-md transition-all">
-                  <span class="text-2xl">{outcome.icon}</span>
-                  <div>
-                    <span class="text-neutral-900 font-black block text-[15px] tracking-tight uppercase">
-                      {outcome.title}
-                    </span>
-                    <span class="text-neutral-500 text-[12px] font-medium leading-tight">
-                      {outcome.desc}
-                    </span>
+          {project.outcomes && project.outcomes.length > 0 && (
+            <div class="border-t border-neutral-100 pt-8">
+              <h4 class="flex items-center gap-3 text-[15px] font-black text-black uppercase tracking-[0.3em] mb-6">
+                <span class="w-4 h-[1.5px] bg-black"></span> Key Outcomes
+              </h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {project.outcomes.map((outcome) => (
+                  <div class="p-4 rounded-xl bg-white border border-neutral-100 flex gap-4 items-center hover:shadow-md transition-all">
+                    <span class="text-2xl">{outcome.icon}</span>
+                    <div>
+                      <span class="text-neutral-900 font-black block text-[15px] tracking-tight uppercase">
+                        {outcome.title}
+                      </span>
+                      <span class="text-neutral-500 text-[12px] font-medium leading-tight">
+                        {outcome.desc}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     ))}
