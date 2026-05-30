@@ -21,15 +21,16 @@ export interface EducationProps {
 }
 
 export interface ExperienceProps {
-  company: string;
   position: string;
+  company: string;
   location: string;
   startDate: string;
   endDate: string;
-  summary: string[];
   logo?: string;
-  image?: string | string[];
   certificateLink?: string;
+  image?: string | string[];
+  description?: string; 
+  summary: string[];   
 }
 
 export interface OrganizationProps {

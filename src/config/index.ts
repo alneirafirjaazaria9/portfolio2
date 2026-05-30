@@ -60,6 +60,7 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Jan, 2026",
       endDate: "May, 2026",
       image: ["/moore.png", "/moore2.png"],
+      description: "Assisted auditor in audit engagements for two corporate clients.",
       summary: [
         "Assisted auditor in audit engagements for two corporate clients, including a subsidiary of a publicly listed company and a private company.",
         "Conducted analytical reviews on appriximately 15+ financial statement accounts within the Audit Working Paper to identify trends, inconsistencies, and investigation.",
@@ -80,6 +81,7 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Aug, 2025",
       endDate: "Dec, 2025",
       image: ["/daxtro1.jpeg", "/daxtro2.png"],
+      description: "Optimized divisional budget controls via automated Excel tools, managed daily data entries, and assisted in asset internal audits.",
       summary: [
         "Optimized divisional budget controls via automated Excel tools, managed daily data entries, and assisted in asset internal audits.",
         "Designed a controlling budget tools based on advanced Microsoft Excel for all office divisions.",
@@ -98,6 +100,7 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Jan, 2025",
       endDate: "Jun, 2025",
       image: ["/mnk1.png", "/mnk2.png"],
+      description: "Assisted in corporate external audits by executing substantive accounts testing, ledger reconciliation, and on-site fieldwork.",
       summary: [
         "Assisted in corporate external audits by executing substantive accounts testing, ledger reconciliation, and on-site fieldwork.",
         "Assisted auditors in handled audits for over 10+ corporate clients (both general audit or special audit).",
@@ -117,6 +120,7 @@ export const SITE_CONTENT: SiteContent = {
       startDate: "Jul, 2023",
       endDate: "Aug, 2023",
       image: ["/bri.png"],
+      description: "Supported banking unit operations by verifying transaction records, organizing document archives, and assisting with daily bookkeeping.",
       summary: [
         "Supported banking unit operations by verifying transaction records, organizing document archives, and assisting with daily bookkeeping.",
         "Verifying the validity of recording unit transactions.",

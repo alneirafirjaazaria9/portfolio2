@@ -8,9 +8,9 @@ const { siteLogo, navLinks } = Astro.props;
 ---
 
 <header id="navbar" class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 transition-transform duration-500">
-  <div class="flex items-center gap-6 rounded-full border border-neutral-200 bg-white/80 px-6 py-2.5 backdrop-blur-xl shadow-sm w-full max-w-3xl justify-between">
+  <div class="flex items-center gap-6 rounded-full border border-neutral-200 bg-white/80 px-6 py-2.5 backdrop-blur-xl shadow-sm w-full max-w-3xl justify-start">
     
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-5 shrink-0">
       <a href="/" class="flex items-center gap-3 group">
         <img 
           src={siteLogo} 
@@ -23,8 +23,10 @@ const { siteLogo, navLinks } = Astro.props;
       </a>
 
       <div class="h-4 w-[1px] bg-neutral-200 hidden sm:block"></div>
-    </div> <nav>
-      <ul class="flex items-center gap-5 text-[11px] font-black uppercase tracking-widest text-neutral-500">
+    </div>
+
+    <nav class="overflow-x-auto no-scrollbar">
+      <ul class="flex items-center gap-5 text-[11px] font-black uppercase tracking-widest text-neutral-500 whitespace-nowrap">
         {navLinks.map((link) => (
           <li>
             <a href={link.href} class="transition-all duration-300 hover:text-black relative group/link">
@@ -36,7 +38,8 @@ const { siteLogo, navLinks } = Astro.props;
       </ul>
     </nav>
 
-  </div> </header>
+  </div>
+</header>
 
 <script>
   let lastScrollTop = 0;
@@ -45,7 +48,6 @@ const { siteLogo, navLinks } = Astro.props;
   window.addEventListener("scroll", () => {
     if (navbar) {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      // Efek hide-on-scroll yang smooth
       if (scrollTop > lastScrollTop && scrollTop > 100) {
         navbar.style.transform = "translateY(-200%)";
       } else {
