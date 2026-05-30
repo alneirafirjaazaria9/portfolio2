@@ -23,24 +23,20 @@ const { siteLogo, navLinks } = Astro.props;
       </a>
 
       <div class="h-4 w-[1px] bg-neutral-200 hidden sm:block"></div>
-
-      {}
-
-    <nav>
+    </div> <nav>
       <ul class="flex items-center gap-5 text-[11px] font-black uppercase tracking-widest text-neutral-500">
         {navLinks.map((link) => (
           <li>
             <a href={link.href} class="transition-all duration-300 hover:text-black relative group/link">
               {link.text}
-      {}
               <span class="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-black transition-all duration-300 group-hover/link:w-full"></span>
             </a>
           </li>
         ))}
       </ul>
     </nav>
-  </div>
-</header>
+
+  </div> </header>
 
 <script>
   let lastScrollTop = 0;
@@ -49,7 +45,7 @@ const { siteLogo, navLinks } = Astro.props;
   window.addEventListener("scroll", () => {
     if (navbar) {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      // Berikan efek hide yang lebih smooth
+      // Efek hide-on-scroll yang smooth
       if (scrollTop > lastScrollTop && scrollTop > 100) {
         navbar.style.transform = "translateY(-200%)";
       } else {

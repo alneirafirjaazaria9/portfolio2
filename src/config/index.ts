@@ -55,13 +55,13 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "KAP Mirawati Sensi Idris (Moore Global)",
       position: "Audit Intern",
-      summary: "Assisted auditor in audit engagements for two corporate clients, including a subsidiary of a publicly listed company and a private company.",
       logo: "/logomoore.png",
       location: "South Jakarta, Jakarta", 
       startDate: "Jan, 2026",
       endDate: "May, 2026",
       image: ["/moore.png", "/moore2.png"],
-      details: [
+      summary: [
+        "Assisted auditor in audit engagements for two corporate clients, including a subsidiary of a publicly listed company and a private company.",
         "Conducted analytical reviews on appriximately 15+ financial statement accounts within the Audit Working Paper to identify trends, inconsistencies, and investigation.",
         "Fieldwork audit at client’s company.",
         "Prepared and filling Working Audit Paper for current audit engagements.",
@@ -75,13 +75,13 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "PT Pandu Mahardika Perdana (DAXTRO)",
       position: "Finance & Accounting Intern",
-      summary: "Optimized divisional budget controls via automated Excel tools, managed daily data entries, and assisted in asset internal audits.",
       logo: "/logodaxtro.png",
       location: "Central Jakarta, Jakarta", 
       startDate: "Aug, 2025",
       endDate: "Dec, 2025",
       image: ["/daxtro1.jpeg", "/daxtro2.png"],
-      details: [
+      summary: [
+        "Optimized divisional budget controls via automated Excel tools, managed daily data entries, and assisted in asset internal audits.",
         "Designed a controlling budget tools based on advanced Microsoft Excel for all office divisions.",
         "Internal audits, include stock opname of 30+ spareparts.",
         "Create a Standard Operational Procedure (SOP) of submission budgeting.",
@@ -93,13 +93,13 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "KAP MNK & Partners (Surakarta Branch)",
       position: "Audit Intern",
-      summary: "Assisted in corporate external audits by executing substantive accounts testing, ledger reconciliation, and on-site fieldwork.",
       logo: "/logomnk.png",
       location: "Surakarta, Central Java", 
       startDate: "Jan, 2025",
       endDate: "Jun, 2025",
       image: ["/mnk1.png", "/mnk2.png"],
-      details: [
+      summary: [
+        "Assisted in corporate external audits by executing substantive accounts testing, ledger reconciliation, and on-site fieldwork.",
         "Assisted auditors in handled audits for over 10+ corporate clients (both general audit or special audit).",
         "Analyzed and Prepared Working Audit Papers.",
         "Verification of 300+ supporting cash documents (vouching).",
@@ -112,13 +112,13 @@ export const SITE_CONTENT: SiteContent = {
     {
       company: "Bank Rakyat Indonesia (Persero) Tbk.",
       position: "Unit Administrative Intern",
-      summary: "Supported banking unit operations by verifying transaction records, organizing document archives, and assisting with daily bookkeeping.",
       logo: "/logobri.png",
       location: "Madiun, East Java", 
       startDate: "Jul, 2023",
       endDate: "Aug, 2023",
       image: ["/bri.png"],
-      details: [
+      summary: [
+        "Supported banking unit operations by verifying transaction records, organizing document archives, and assisting with daily bookkeeping.",
         "Verifying the validity of recording unit transactions.",
         "Manage document archives from office units.",
         "Assisted in unit bookkeeping process.",
