@@ -1,5 +1,6 @@
 ---
 import Section from "./Section.astro";
+import { Image } from "astro:assets";
 import type { ProjectProps } from "@types";
 
 interface Props {
@@ -12,20 +13,21 @@ const { projects } = Astro.props;
 <Section text="Projects" href="projects">
   <div id="projects-main-container" class="relative overflow-hidden w-full">
     
-    <div id="projects-grid" class="w-full flex flex-col gap-6 transition-all duration-500 ease-out">
+    <div id="projects-grid" class="w-full flex flex-col gap-6 transition-all duration-500 ease-in-out">
       {projects.map((project, index) => (
-        <div class="group flex flex-col sm:flex-row rounded-2xl border border-neutral-200 bg-white overflow-hidden min-h-[140px] transition-all duration-500 hover:shadow-xl hover:shadow-neutral-200/40">
+        <div class="group flex flex-col sm:flex-row rounded-2xl border border-neutral-200 bg-white overflow-hidden min-h-[110px] transition-all duration-500 hover:shadow-xl hover:shadow-neutral-200/40">
           
-          <div class="relative w-full sm:w-1/4 min-w-[120px] sm:min-w-[180px] md:min-w-[220px] h-48 sm:h-auto overflow-hidden bg-neutral-100 flex-shrink-0">
-            <img 
-              src={project.image} 
-              alt={project.name}
+          <div class="relative w-full sm:w-1/5 min-w-[100px] sm:min-w-[140px] md:min-w-[160px] h-36 sm:h-auto overflow-hidden bg-neutral-100 flex-shrink-0">
+            <Image 
+              src={Array.isArray(project.image) ? project.image[0] : project.image} 
+              alt={project.name} 
+              width={400} 
+              height={280} 
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-              loading="lazy"
             />
           </div>
           
-          <div class="p-5 sm:p-6 flex flex-col flex-grow text-left justify-between">
+          <div class="p-4 sm:p-5 flex flex-col flex-grow text-left justify-between">
             <div>
               <h3 class="text-base sm:text-lg font-black text-neutral-900 mb-1 tracking-tight">{project.name}</h3>
               <p class="text-xs sm:text-sm text-neutral-500 line-clamp-2 md:line-clamp-3 leading-relaxed font-medium">
@@ -33,11 +35,11 @@ const { projects } = Astro.props;
               </p>
             </div>
             
-            <div class="pt-4 border-t border-neutral-100/80 mt-3 flex">
+            <div class="pt-3 border-t border-neutral-100/80 mt-3 flex">
               <button 
                 type="button"
                 data-project-target={index}
-                class="view-details-btn inline-flex items-center gap-3 px-5 py-2.5 rounded-xl border border-neutral-200 bg-white text-[9px] font-black text-neutral-900 uppercase tracking-[0.2em] hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer group/btn shadow-sm shadow-neutral-50"
+                class="view-details-btn inline-flex items-center gap-3 px-4 py-2 rounded-xl border border-neutral-200 bg-white text-[9px] font-black text-neutral-900 uppercase tracking-[0.2em] hover:bg-black hover:text-white hover:border-black transition-all duration-300 cursor-pointer group/btn shadow-sm shadow-neutral-50"
               >
                 <span>View Details</span>
                 <span class="text-sm leading-none transform transition-transform duration-300 group-hover/btn:translate-x-0.5">→</span>
@@ -51,7 +53,7 @@ const { projects } = Astro.props;
     {projects.map((project, index) => (
       <div 
         id={`detail-${index}`} 
-        class="project-detail-view hidden absolute top-0 left-0 w-full opacity-0 translate-x-8 transition-all duration-500 ease-out"
+        class="project-detail-view hidden absolute top-0 left-0 w-full opacity-0 translate-x-12 transition-all duration-500 ease-in-out"
       >
         <div class="flex mb-6 w-full">
           <button type="button" class="back-to-grid inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-neutral-200 bg-white text-[9px] font-black uppercase tracking-[0.2em] text-neutral-900 hover:bg-black hover:text-white transition-all duration-300 cursor-pointer group shadow-sm shadow-neutral-100">
@@ -60,11 +62,12 @@ const { projects } = Astro.props;
         </div>
 
         <div class="rounded-[2rem] border border-neutral-200 bg-white p-5 md:p-10 w-full shadow-sm">
-          
-          <div class="w-full bg-neutral-50 aspect-video max-h-[420px] rounded-2xl overflow-hidden mb-8 border border-neutral-200/60 shadow-inner flex items-center justify-center">
-             <img 
-              src={project.image} 
-              alt={project.name}
+          <div class="w-full bg-neutral-100 aspect-video max-h-[450px] rounded-2xl overflow-hidden mb-8 border border-neutral-200/60 shadow-sm flex items-center justify-center">
+             <Image 
+              src={Array.isArray(project.image) ? project.image[0] : project.image} 
+              alt={project.name} 
+              width={1200} 
+              height={675} 
               class="max-w-full max-h-full object-contain" 
              />
           </div>
@@ -106,7 +109,6 @@ const { projects } = Astro.props;
               <h4 class="flex items-center gap-3 text-[13px] md:text-[14px] font-black text-black uppercase tracking-[0.3em] mb-6">
                 <span class="w-4 h-[1.5px] bg-black"></span> Logical Conceptual
               </h4>
-              
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {project.formulas.map((f) => (
                   <div class="group p-4 bg-white border border-neutral-200 rounded-xl hover:border-black transition-all duration-300">
@@ -127,7 +129,7 @@ const { projects } = Astro.props;
               </h4>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {project.outcomes.map((outcome) => (
-                  <div class="p-4 rounded-xl bg-white border border-neutral-200 flex gap-4 items-center hover:shadow-md transition-all">
+                  <div class="p-4 rounded-xl bg-white border border-neutral-100 flex gap-4 items-center hover:shadow-md transition-all">
                     <span class="text-2xl flex-shrink-0">{outcome.icon}</span>
                     <div>
                       <span class="text-neutral-900 font-black block text-[13px] md:text-[14px] tracking-tight uppercase">
@@ -149,69 +151,50 @@ const { projects } = Astro.props;
 </Section>
 
 <script>
-  const initProjectManager = () => {
-    const mainGrid = document.getElementById('projects-grid');
-    const triggers = document.querySelectorAll('.view-details-btn');
-    const backButtons = document.querySelectorAll('.back-to-grid');
+  const setupNavigation = () => {
+    const grid = document.getElementById('projects-grid');
+    const viewBtns = document.querySelectorAll('.view-details-btn');
+    const backBtns = document.querySelectorAll('.back-to-grid');
 
-    // Bersihkan sisa-sisa state lama jika ada
-    triggers.forEach(t => {
-      const newTrigger = t.cloneNode(true);
-      t.parentNode?.replaceChild(newTrigger, t);
-    });
-    backButtons.forEach(b => {
-      const newBack = b.cloneNode(true);
-      b.parentNode?.replaceChild(newBack, b);
-    });
-
-    // Ambil ulang elemen pasca-pembersihan kloning
-    const freshTriggers = document.querySelectorAll('.view-details-btn');
-    const freshBackButtons = document.querySelectorAll('.back-to-grid');
-
-    freshTriggers.forEach(btn => {
+    viewBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        const indexId = btn.getAttribute('data-project-target');
-        const targetView = document.getElementById(`detail-${indexId}`);
+        const targetId = btn.getAttribute('data-project-target');
+        const targetView = document.getElementById(`detail-${targetId}`);
 
-        if (!mainGrid || !targetView) return;
-
-        mainGrid.classList.add('-translate-x-4', 'opacity-0', 'pointer-events-none');
-        
-        setTimeout(() => {
-          mainGrid.classList.add('hidden');
-          targetView.classList.remove('hidden');
-          
-          requestAnimationFrame(() => {
-            targetView.classList.remove('opacity-0', 'translate-x-8', 'absolute');
-            targetView.classList.add('opacity-100', 'translate-x-0', 'relative');
-          });
-        }, 300);
-
-        document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (grid && targetView) {
+          grid.classList.add('opacity-0', 'pointer-events-none');
+          setTimeout(() => {
+            grid.classList.add('hidden');
+            targetView.classList.remove('hidden');
+            requestAnimationFrame(() => {
+              targetView.classList.remove('opacity-0', 'absolute');
+              targetView.classList.add('opacity-100', 'relative');
+            });
+          }, 350);
+          document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+        }
       });
     });
 
-    freshBackButtons.forEach(btn => {
+    backBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        const currentOpenView = btn.closest('.project-detail-view');
-        if (!mainGrid || !currentOpenView) return;
-
-        currentOpenView.classList.add('opacity-0', 'translate-x-8');
-        
-        setTimeout(() => {
-          currentOpenView.classList.add('hidden');
-          currentOpenView.classList.remove('relative');
-          currentOpenView.classList.add('absolute');
-          
-          mainGrid.classList.remove('hidden');
-          requestAnimationFrame(() => {
-            mainGrid.classList.remove('-translate-x-4', 'opacity-0', 'pointer-events-none');
-          });
-        }, 300);
+        const currentView = btn.closest('.project-detail-view');
+        if (grid && currentView) {
+          currentView.classList.add('opacity-0');
+          setTimeout(() => {
+            currentView.classList.add('hidden');
+            currentView.classList.remove('relative');
+            currentView.classList.add('absolute');
+            grid.classList.remove('hidden');
+            requestAnimationFrame(() => {
+              grid.classList.remove('opacity-0', 'pointer-events-none');
+            });
+          }, 350);
+        }
       });
     });
   };
 
-  initProjectManager();
-  document.addEventListener('astro:after-navigation', initProjectManager);
+  setupNavigation();
+  document.addEventListener('astro:after-navigation', setupNavigation);
 </script>
