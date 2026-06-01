@@ -48,6 +48,39 @@ const canonicalURL = "";
       <slot />
     </main>
 
+    <button
+      id="back-to-top"
+      class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-sm bg-neutral-900 text-white shadow-md border border-neutral-800 opacity-0 invisible translate-y-4 transition-all duration-300 hover:bg-neutral-800 hover:scale-105 active:scale-95 flex items-center justify-center cursor-pointer"
+      aria-label="Back to top"
+    >
+      <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+
+    <script>
+      const backToTopBtn = document.getElementById('back-to-top');
+
+      if (backToTopBtn) {
+        // Deteksi pergerakan scroll layar
+        window.addEventListener('scroll', () => {
+          // Muncul perlahan ketika scroll melebihi 400px ke bawah
+          if (window.scrollY > 400) {
+            backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+            backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');
+          } else {
+            backToTopBtn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+            backToTopBtn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+          }
+        });
+
+        // Aksi ketika tombol diklik
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Meluncur dengan halus ke atas
+          });
+        });
+      }
+    </script>
     <style is:global>
       /* Reset scrollbar biar minimalis */
       ::-webkit-scrollbar {

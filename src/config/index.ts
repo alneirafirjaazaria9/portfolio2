@@ -1,7 +1,7 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Alneira Firja Azaria — Finance, Accounting, Audit Enthusiast",
+  title: "Alneira Firja Azaria",
   author: "Alneira Firja Azaria",
   description: "A final-year Accounting student at IPB University with strong analytical skills and extensive internship experience in accounting/finance and auditing.",
   lang: "en",
@@ -25,7 +25,7 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Alneira Firja Azaria",
-    specialty: " Auditing & Financial Accounting Enthusiast",
+    specialty: " Finance, Accounting, Audit Enthusiast",
     summary: "Detail-oriented final-year Applied Accounting student at IPB University with hands-on experience in external audit across for several corporate clients and accounting exposure including budgeting, journal entries, and internal control procedures. Strong analytical skills with proven leadership experience as Head of Internal Directorate at Komite Audit Mahasiswa IPB.",
     email: "/CV_AlneiraFirjaAzaria.pdf",
   },
