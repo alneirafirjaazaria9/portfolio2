@@ -49,9 +49,7 @@ import { SITE_CONTENT, SITE_CONFIG } from "../config/index";
   const backToTopBtn = document.getElementById('back-to-top');
 
   if (backToTopBtn) {
-    // Fungsi memantau scroll penonton web
     window.addEventListener('scroll', () => {
-      // Tombol baru muncul jika user sudah scroll ke bawah sejauh 400px
       if (window.scrollY > 400) {
         backToTopBtn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
         backToTopBtn.classList.add('opacity-100', 'visible', 'translate-y-0');

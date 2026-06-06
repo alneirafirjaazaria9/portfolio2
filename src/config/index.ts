@@ -71,7 +71,7 @@ export const SITE_CONTENT: SiteContent = {
         "Conducted 100+ Accounts Receivable (AR) aging analysis.",
         "Recalculated 100+ asset depreciations and amortizations.",
       ],
-      certificateLink: "https://drive.google.com/file/d/1ifj-vACvaOgtmBF-EbTK8541VOT1dPpW/view",
+      certificateLink: "https://drive.google.com/open?id=1HmLlMQV_HNCeJOraOga1SYCW8Dcgv6jH&authuser=1",
     },
     {
       company: "PT Pandu Mahardika Perdana (DAXTRO)",
