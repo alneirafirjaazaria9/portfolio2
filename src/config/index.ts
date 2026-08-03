@@ -26,7 +26,7 @@ export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Alneira Firja Azaria",
     specialty: " Finance, Accounting, Audit Enthusiast",
-    summary: "Detail-oriented final-year Applied Accounting student at IPB University with hands-on experience in external audit across for several corporate clients and accounting exposure including budgeting, journal entries, and internal control procedures. Strong analytical skills with proven leadership experience as Head of Internal Directorate at Komite Audit Mahasiswa IPB.",
+    summary: "Analytical and detail-oriented Accounting Fresh Graduate (IPB University) with practical exposure to external audit, corporate financial recording, budgeting, and internal control evaluations. Strong leadership background from heading the Internal Directorate at Komite Audit Mahasiswa IPB. Ready to add value in Auditor and Accounting roles.",
     email: "/CV_AlneiraFirjaAzaria.pdf",
   },
   
