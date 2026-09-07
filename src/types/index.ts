@@ -26,11 +26,13 @@ export interface ExperienceProps {
   location: string;
   startDate: string;
   endDate: string;
+  type?: string;
   logo?: string;
   certificateLink?: string;
+  referenceLetterLink?: string; 
   image?: string | string[];
   description?: string; 
-  summary: string[];   
+  summary: string | string[]; 
 }
 
 export interface OrganizationProps {

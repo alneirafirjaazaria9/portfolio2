@@ -25,8 +25,8 @@ export const SITE_CONFIG: SiteConfig = {
 export const SITE_CONTENT: SiteContent = {
   hero: {
     name: "Alneira Firja Azaria",
-    specialty: " Finance, Accounting, Audit Enthusiast",
-    summary: "Analytical and detail-oriented Accounting Fresh Graduate (IPB University) with practical exposure to external audit, corporate financial recording, budgeting, and internal control evaluations. Strong leadership background from heading the Internal Directorate at Komite Audit Mahasiswa IPB. Ready to add value in Auditor and Accounting roles.",
+    specialty: "External Audit & Financial Accounting",
+    summary: "Analytical and detail-oriented Accounting Fresh Graduate (IPB University)  with practical exposure to external audit, corporate financial recording, budgeting, and internal control evaluations. Passionate about financial transparency, rigorous audit standards, and risk assessment. Ready to add value in Auditor and Accounting roles.",
     email: "/CV_AlneiraFirjaAzaria.pdf",
   },
   
@@ -34,10 +34,10 @@ export const SITE_CONTENT: SiteContent = {
     technical: [
       { name: "Intermediate Ms. Excel", level: "Certified" },
       { name: "Accurate Accounting System", level: "Intermediate" },
-      { name: "Kledo Accounting System", level: "Certified" },
-      { name: "Financial Reporting", level: "Intermediate" },
+      { name: "Kledo Accounting System", level: "Intermediate" },
+      { name: "Financial Reporting", level: "Experienced" },
       { name: "External Audit", level: "Experienced" },
-      { name: "Internal Audit", level: "Certified" },
+      { name: "Internal Audit", level: "Intermediate" },
       { name: "Data Analyze", level: "Certified" },
     ],
     soft: [
@@ -53,7 +53,21 @@ export const SITE_CONTENT: SiteContent = {
   
   experience: [
     {
+      company: "KAP Dian Utami and Partners",
+      type: "fulltime",
+      position: "Audit Associate",
+      logo: "/kapdu.png",
+      location: "Sleman, Yogyakarta", 
+      startDate: "Sept, 2026",
+      endDate: "present",
+      description: "Assisted auditor in audit engagements for two corporate clients.",
+      summary: [
+        "Currently holding this position, actively engaging in external audit projects and client fieldwork.",
+      ],
+        },
+    {
       company: "KAP Mirawati Sensi Idris (Moore Global)",
+      type: "internship",
       position: "Audit Intern",
       logo: "/logomoore.png",
       location: "South Jakarta, Jakarta", 
@@ -75,6 +89,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       company: "PT Pandu Mahardika Perdana (DAXTRO)",
+      type: "internship",
       position: "Finance & Accounting Intern",
       logo: "/logodaxtro.png",
       location: "Central Jakarta, Jakarta", 
@@ -94,6 +109,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       company: "KAP MNK & Partners (Surakarta Branch)",
+      type: "internship",
       position: "Audit Intern",
       logo: "/logomnk.png",
       location: "Surakarta, Central Java", 
@@ -114,6 +130,7 @@ export const SITE_CONTENT: SiteContent = {
     },
     {
       company: "Bank Rakyat Indonesia (Persero) Tbk.",
+      type: "internship",
       position: "Unit Administrative Intern",
       logo: "/logobri.png",
       location: "Madiun, East Java", 
@@ -214,6 +231,14 @@ export const SITE_CONTENT: SiteContent = {
   
   certification: [
    {
+      title: "Certified VAT and Luxury Goods Sales Tax Technician",
+      issuer: "BNSP",
+      date: "2026",
+      summary: "Experienced in managing PKP registrations, calculating VAT under current regulations, and filing monthly VAT returns for individual and corporate taxpayers",
+      image: "/karirnexcel.png",
+      linkSource: "https://drive.google.com/file/d/1ZrgeTswaBATc5TI0IpmKWiB-ncwVCXmy/view?usp=drive_open",
+    },
+    {
       title: "Microsoft Excel Bootcamp Certification",
       issuer: "Karirnex",
       date: "2026",
